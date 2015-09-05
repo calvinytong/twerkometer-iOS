@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -83,7 +84,7 @@
         <!--Register-->
         <scene sceneID="hMt-1R-Uab">
             <objects>
-                <viewController id="EME-nb-CyJ" userLabel="Register" sceneMemberID="viewController">
+                <viewController id="EME-nb-CyJ" userLabel="Register" customClass="RegisterViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsP-pu-UmC"/>
                         <viewControllerLayoutGuide type="bottom" id="YQB-kP-y7Z"/>
@@ -99,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="87w-lQ-clQ" kind="show" id="1mh-dS-Wzb"/>
+                                    <action selector="createUser:" destination="EME-nb-CyJ" eventType="touchUpInside" id="kNY-RA-lO6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rh-Rv-Dih">
@@ -119,7 +120,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qV3-4q-16W">
                                 <rect key="frame" x="16" y="139" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VsF-h1-chI">
                                 <rect key="frame" x="16" y="177" width="568" height="30"/>
@@ -161,6 +162,14 @@
                             <constraint firstItem="fYG-hL-VAo" firstAttribute="centerX" secondItem="RhJ-t9-D0a" secondAttribute="centerX" id="zba-Zt-DCH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ccn" destination="VsF-h1-chI" id="XVj-c7-cHV"/>
+                        <outlet property="expdate" destination="fYG-hL-VAo" id="y4I-FW-LQ6"/>
+                        <outlet property="password" destination="qV3-4q-16W" id="TId-ze-SC4"/>
+                        <outlet property="securitycode" destination="WXh-B7-TWb" id="9ws-7e-uiH"/>
+                        <outlet property="username" destination="hPg-iS-bQK" id="kCx-ne-Y2d"/>
+                        <segue destination="87w-lQ-clQ" kind="show" identifier="SegueFromRegisterToChallenge" id="OmD-Jo-ii8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XW-M9-DJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +178,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login" customClass="ViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login" customClass="LoginViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -185,7 +194,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="87w-lQ-clQ" kind="show" id="tSi-Mc-SkV"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v7B-y6-g0a"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-5y-pO9">
@@ -196,8 +205,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpQ-xa-LP1">
                                 <rect key="frame" x="16" y="512" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="for tech italicized.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nxh-eA-ndZ">
+                                <rect key="frame" x="185" y="115" width="231" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="J1x-TL-1pD"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="twerk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kch-eh-GPy">
                                 <rect key="frame" x="16" y="28" width="568" height="79"/>
                                 <constraints>
@@ -207,12 +222,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="for tech italicized.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nxh-eA-ndZ">
-                                <rect key="frame" x="185" y="115" width="231" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="231" id="J1x-TL-1pD"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -232,6 +241,12 @@
                             <constraint firstItem="aK5-HB-Mtg" firstAttribute="trailing" secondItem="wpQ-xa-LP1" secondAttribute="trailing" id="pSC-oI-hV0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="login" destination="aK5-HB-Mtg" id="cmV-TS-9nW"/>
+                        <outlet property="password" destination="wpQ-xa-LP1" id="bf8-7h-Fmj"/>
+                        <outlet property="username" destination="ymx-5y-pO9" id="ONa-e0-dBc"/>
+                        <segue destination="87w-lQ-clQ" kind="show" identifier="SegueFromLoginToChallenge" id="gzc-jd-CmE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,7 +255,7 @@
         <!--ChallengeFriend-->
         <scene sceneID="77T-H3-cvz">
             <objects>
-                <viewController id="87w-lQ-clQ" userLabel="ChallengeFriend" sceneMemberID="viewController">
+                <viewController id="87w-lQ-clQ" userLabel="ChallengeFriend" customClass="ChallengeViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="weW-NZ-2wY"/>
                         <viewControllerLayoutGuide type="bottom" id="B0Q-SR-dff"/>
@@ -249,11 +264,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twerk for tech.png" translatesAutoresizingMaskIntoConstraints="NO" id="jSQ-3Z-7cb">
+                                <rect key="frame" x="160" y="28" width="281" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="0Av-x7-jjm"/>
+                                    <constraint firstAttribute="width" constant="281" id="ErX-Sn-13e"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-gB-ems">
                                 <rect key="frame" x="190" y="190" width="220" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="Gfh-xI-VBl"/>
+                                    <constraint firstAttribute="width" constant="220" id="FHy-GD-epo"/>
+                                    <constraint firstAttribute="width" secondItem="4Ch-gB-ems" secondAttribute="height" multiplier="1:1" id="Nk9-Px-WS5"/>
+                                    <constraint firstAttribute="height" constant="220" id="lGg-ks-ujg"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -267,26 +291,22 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="Pvz-GT-KJ2" kind="show" id="qSk-wi-veD"/>
+                                    <action selector="challenge:" destination="87w-lQ-clQ" eventType="touchUpInside" id="u7e-vr-L17"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twerk for tech.png" translatesAutoresizingMaskIntoConstraints="NO" id="jSQ-3Z-7cb">
-                                <rect key="frame" x="160" y="28" width="281" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="CQW-jt-CpS"/>
-                                    <constraint firstAttribute="width" constant="281" id="Gqb-t9-JQF"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B0Q-SR-dff" firstAttribute="top" secondItem="4Ch-gB-ems" secondAttribute="bottom" constant="190" id="8RO-Zv-PGv"/>
-                            <constraint firstItem="jSQ-3Z-7cb" firstAttribute="top" secondItem="weW-NZ-2wY" secondAttribute="bottom" constant="8" symbolic="YES" id="Na8-9Z-L6U"/>
-                            <constraint firstItem="4Ch-gB-ems" firstAttribute="centerY" secondItem="aiO-OV-R6T" secondAttribute="centerY" id="Ws5-re-cFp"/>
-                            <constraint firstItem="4Ch-gB-ems" firstAttribute="centerX" secondItem="aiO-OV-R6T" secondAttribute="centerX" id="fAU-qJ-DHG"/>
-                            <constraint firstItem="4Ch-gB-ems" firstAttribute="centerX" secondItem="jSQ-3Z-7cb" secondAttribute="centerX" id="x57-LI-q5P"/>
+                            <constraint firstAttribute="centerX" secondItem="4Ch-gB-ems" secondAttribute="centerX" id="0hX-Ug-a1E"/>
+                            <constraint firstAttribute="centerY" secondItem="4Ch-gB-ems" secondAttribute="centerY" id="3Qq-bF-dS5"/>
+                            <constraint firstItem="jSQ-3Z-7cb" firstAttribute="top" secondItem="weW-NZ-2wY" secondAttribute="bottom" constant="8" symbolic="YES" id="4AJ-gS-lef"/>
+                            <constraint firstItem="jSQ-3Z-7cb" firstAttribute="centerX" secondItem="4Ch-gB-ems" secondAttribute="centerX" id="A71-cM-D1E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="challengebutton" destination="4Ch-gB-ems" id="lzG-AS-xCu"/>
+                        <segue destination="Pvz-GT-KJ2" kind="show" identifier="SegueToPlayerFound" id="KUw-5a-Wpr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGL-Tx-9m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,7 +315,7 @@
         <!--FriendFound-->
         <scene sceneID="XMn-5r-vm1">
             <objects>
-                <viewController id="Pvz-GT-KJ2" userLabel="FriendFound" sceneMemberID="viewController">
+                <viewController id="Pvz-GT-KJ2" userLabel="FriendFound" customClass="PlayerFoundViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Toi-KQ-AuB"/>
                         <viewControllerLayoutGuide type="bottom" id="khe-jD-x5c"/>
@@ -315,7 +335,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Hc-Q4-3YD" kind="show" id="n0X-9o-11W"/>
+                                    <action selector="play:" destination="Pvz-GT-KJ2" eventType="touchUpInside" id="zwv-E1-oeL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nearby player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-8a-GgK">
@@ -359,6 +379,11 @@
                             <constraint firstItem="gYZ-8g-Gby" firstAttribute="centerX" secondItem="iYx-kW-8Tp" secondAttribute="centerX" id="wgM-Qo-MMP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playbutton" destination="hNO-JD-taW" id="7X0-3G-tfP"/>
+                        <outlet property="ptwolabel" destination="iYx-kW-8Tp" id="JGz-Mn-ZdO"/>
+                        <segue destination="6Hc-Q4-3YD" kind="show" identifier="SegueToBetScreen" id="kfc-sM-TcR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASV-ir-9XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,7 +392,7 @@
         <!--Bet-->
         <scene sceneID="qpg-2Z-Vap">
             <objects>
-                <viewController id="6Hc-Q4-3YD" userLabel="Bet" sceneMemberID="viewController">
+                <viewController id="6Hc-Q4-3YD" userLabel="Bet" customClass="BetViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KjX-5C-i3i"/>
                         <viewControllerLayoutGuide type="bottom" id="cdJ-Sf-dv6"/>
@@ -425,7 +450,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OIQ-H8-sZa" kind="show" id="usw-lt-123"/>
+                                    <action selector="confirm:" destination="6Hc-Q4-3YD" eventType="touchUpInside" id="KIF-Xh-SI8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -448,6 +473,11 @@
                             <constraint firstAttribute="bottom" secondItem="cIX-5g-IKQ" secondAttribute="bottom" constant="20" symbolic="YES" id="zWn-0U-dFV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="betselector" destination="9H7-zf-oQC" id="3b1-06-Lbk"/>
+                        <outlet property="confirmbutton" destination="cIX-5g-IKQ" id="Fck-r1-dMy"/>
+                        <segue destination="OIQ-H8-sZa" kind="show" identifier="SegueToReadyScreen" id="PXG-ct-auj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPc-1F-Wfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,7 +606,7 @@
         <!--PlaceInPocket-->
         <scene sceneID="jNm-26-Ifl">
             <objects>
-                <viewController id="OIQ-H8-sZa" userLabel="PlaceInPocket" sceneMemberID="viewController">
+                <viewController id="OIQ-H8-sZa" userLabel="PlaceInPocket" customClass="ReadyScreenViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v7D-1f-zmY"/>
                         <viewControllerLayoutGuide type="bottom" id="RD7-WX-Qyq"/>
@@ -624,7 +654,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qxl-rV-KDS" kind="show" id="9TD-p8-oeU"/>
+                                    <action selector="Start:" destination="OIQ-H8-sZa" eventType="touchUpInside" id="RR5-Ne-ZFb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,6 +675,10 @@
                             <constraint firstItem="YAf-Om-SCY" firstAttribute="trailing" secondItem="Chg-CL-Prn" secondAttribute="trailing" id="tXr-Iv-6AZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Start" destination="SW5-Bo-CY2" id="xqu-hA-ZpN"/>
+                        <segue destination="Qxl-rV-KDS" kind="show" identifier="SegueToTwerkViewController" id="DsL-IF-y2e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gn-Wr-bM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -792,6 +826,6 @@
         <image name="twerk for tech.png" width="456" height="82"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1mh-dS-Wzb"/>
+        <segue reference="mYz-Ek-lcI"/>
     </inferredMetricsTieBreakers>
 </document>

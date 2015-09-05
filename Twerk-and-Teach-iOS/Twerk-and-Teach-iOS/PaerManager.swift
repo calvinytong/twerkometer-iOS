@@ -40,7 +40,6 @@ class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDele
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    var dataToSend : [String : AnyObject]!
     
     //var pnHandler : DataConnectionHandler?
 
@@ -57,10 +56,9 @@ class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDele
     var locationOfPaer : CLLocation = CLLocation()
     
     /**Init with the view that'll be passed along the connection flow, and the dict of info to send.*/
-    init(dictToSend : [String : AnyObject]) {
+    override init() {
         super.init()
 
-        self.dataToSend = dictToSend
         
         requestAuthorization()
         
