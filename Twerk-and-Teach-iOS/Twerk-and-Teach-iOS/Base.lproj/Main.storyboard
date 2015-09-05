@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -25,6 +26,15 @@
                                     <action selector="Range:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBj-yJ-KQn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md9-Ih-4Vz">
+                                <rect key="frame" x="58" y="109" width="40" height="30"/>
+                                <state key="normal" title="Twerk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qxl-rV-KDS" kind="show" id="TDy-xK-UzB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -34,6 +44,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Twerk View Controller-->
+        <scene sceneID="7Xm-ai-38D">
+            <objects>
+                <viewController id="Qxl-rV-KDS" customClass="TwerkViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pyf-ef-VWg"/>
+                        <viewControllerLayoutGuide type="bottom" id="vVo-Y5-6Np"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VQM-oS-gC0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H9-u3-RhK">
+                                <rect key="frame" x="16" y="20" width="128.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-co-ZqC">
+                                <rect key="frame" x="151" y="20" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egS-LQ-7Tx">
+                                <rect key="frame" x="125" y="49" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twerk Count:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTC-RR-tnF">
+                                <rect key="frame" x="16" y="48" width="101" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrh-Mi-nam">
+                                <rect key="frame" x="16" y="76" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="Qxl-rV-KDS" eventType="touchUpInside" id="jUx-J9-8VC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-3B-nwO">
+                                <rect key="frame" x="16" y="114" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fiS-zs-WWR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nTC-RR-tnF" firstAttribute="top" secondItem="egS-LQ-7Tx" secondAttribute="top" constant="-1" id="4i9-7E-IQ8"/>
+                            <constraint firstItem="egS-LQ-7Tx" firstAttribute="leading" secondItem="nTC-RR-tnF" secondAttribute="trailing" constant="8" id="AeF-SH-HON"/>
+                            <constraint firstItem="4H9-u3-RhK" firstAttribute="top" secondItem="Pyf-ef-VWg" secondAttribute="bottom" id="Hfv-Dy-HhT"/>
+                            <constraint firstItem="HRm-3B-nwO" firstAttribute="top" secondItem="Hrh-Mi-nam" secondAttribute="bottom" constant="8" id="JHu-iu-3aw"/>
+                            <constraint firstItem="nTC-RR-tnF" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" id="W7x-bz-YAP"/>
+                            <constraint firstItem="Hrh-Mi-nam" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" id="bpF-g5-MTA"/>
+                            <constraint firstItem="4H9-u3-RhK" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" id="gFw-hz-y8X"/>
+                            <constraint firstItem="Hrh-Mi-nam" firstAttribute="top" secondItem="nTC-RR-tnF" secondAttribute="bottom" constant="7" id="lxp-fK-4XX"/>
+                            <constraint firstItem="Yeg-co-ZqC" firstAttribute="leading" secondItem="4H9-u3-RhK" secondAttribute="trailing" constant="7" id="mdV-z3-PKY"/>
+                            <constraint firstItem="HRm-3B-nwO" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" id="moI-9c-gx8"/>
+                            <constraint firstItem="nTC-RR-tnF" firstAttribute="top" secondItem="4H9-u3-RhK" secondAttribute="bottom" constant="8" id="oFm-yi-FA5"/>
+                            <constraint firstItem="Yeg-co-ZqC" firstAttribute="top" secondItem="4H9-u3-RhK" secondAttribute="top" id="sLb-9i-BnK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="Yeg-co-ZqC" id="OyU-Eu-xxe"/>
+                        <outlet property="twerkCount" destination="egS-LQ-7Tx" id="EpH-P5-6l8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEw-Ju-D56" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="245"/>
         </scene>
     </scenes>
 </document>
