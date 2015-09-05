@@ -29,8 +29,6 @@
 		3E0222251B9ADD73008CD051 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222241B9ADD73008CD051 /* AudioToolbox.framework */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
-		3EA1C17E1B9ADE7200D6AC86 /* PaerTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */; };
-		3EA1C17F1B9ADE7200D6AC86 /* PaerTransferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
 		3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */; };
 		3EA1C1821B9ADE7200D6AC86 /* PaerUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */; };
@@ -80,8 +78,6 @@
 		3E0222241B9ADD73008CD051 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
-		3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerTransfer.swift; sourceTree = "<group>"; };
-		3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerTransferDelegate.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
 		3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStreamDelegate.swift; sourceTree = "<group>"; };
 		3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerUIDelegate.swift; sourceTree = "<group>"; };
@@ -165,8 +161,6 @@
 				3E0221EC1B9ADCC4008CD051 /* ViewController.swift */,
 				3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */,
 				3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */,
-				3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */,
-				3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */,
 				3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */,
 				3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */,
 				3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */,
@@ -378,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EA1C17E1B9ADE7200D6AC86 /* PaerTransfer.swift in Sources */,
 				3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */,
 				3EA1C1821B9ADE7200D6AC86 /* PaerUIDelegate.swift in Sources */,
 				3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */,
@@ -388,7 +381,6 @@
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
 				3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */,
-				3EA1C17F1B9ADE7200D6AC86 /* PaerTransferDelegate.swift in Sources */,
 				3EA1C18C1B9B12FD00D6AC86 /* StartScreenViewController.swift in Sources */,
 				3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */,
 			);

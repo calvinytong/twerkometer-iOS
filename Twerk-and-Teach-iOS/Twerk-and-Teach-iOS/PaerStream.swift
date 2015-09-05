@@ -21,11 +21,7 @@ class PaerStream: NSObject, PNObjectEventListener
     var foreignMajor : Int!
     var joinedChannel : Bool = false
     var channelName : String = ""
-    
-    var dataToSend : [String : AnyObject] = Dictionary<String, AnyObject>()
-    var sentData : Bool = false
-    var receivedData : Bool = false
-    var friendOffer : [String : AnyObject] = Dictionary<String, AnyObject>() // The received data
+    var twousersinchannel : Bool = false
     
     var delegate : PaerStreamDelegate!
     
@@ -43,9 +39,6 @@ class PaerStream: NSObject, PNObjectEventListener
         
         formChannelName()
         
-//        dataToSend = data
-//        dataToSend["uuid"] = client.uuid() // sign the message with sender id
-        
         client.subscribeToChannels([channelName], withPresence: true)
     }
     
@@ -58,10 +51,6 @@ class PaerStream: NSObject, PNObjectEventListener
             if !status.error
             {
                 println("Successfully transmitted data!")
-                
-                self.sentData = true
-                
-                self.checkTransferStatus() // check to see if transfer is completed
             }
             else // Something failed
             {
@@ -73,22 +62,14 @@ class PaerStream: NSObject, PNObjectEventListener
     /**Handle receiving messages over the channel. We filter only for messages not sent by us.*/
     func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
         
-        if !receivedData
-        {
             // Ensure we're on the correct channel
-            if message.data.subscribedChannel == channelName
-            {
-                let messageData : AnyObject = message.data.message
-                
-
-                println("Received message: \(messageData)")
-                        
-                        
-                receivedData = true
-                        
-                checkTransferStatus() // check to see if transfer is completed
-        
-            }
+        if message.data.subscribedChannel == channelName
+        {
+            let messageData : AnyObject = message.data.message
+            println("Received message: \(messageData)")
+            
+            //do what we want with messageData
+            
         }
     }
     
@@ -98,34 +79,35 @@ class PaerStream: NSObject, PNObjectEventListener
         if event.data.subscribedChannel == channelName // Ensure we're on the correct channel
         {
             println("Received presence event on transmit channel: \(event.data.presenceEvent)")
-//            if event.data.presenceEvent == "join"
-//            {
-//                // Check the users on the channel
-//                client.hereNowForChannel(channelName, withCompletion: {
-//                    (result: PNPresenceChannelHereNowResult!, error: PNErrorStatus!) -> Void in
-//                    
-//                    if error == nil
-//                    {
-//                        if result.data.occupancy == 2
-//                        {
-//                            println("result.data.uuids: \(result.data.uuids)")
-//                            
+            if event.data.presenceEvent == "join"
+            {
+                // Check the users on the channel
+                client.hereNowForChannel(channelName, withCompletion: {
+                    (result: PNPresenceChannelHereNowResult!, error: PNErrorStatus!) -> Void in
+                    
+                    if error == nil
+                    {
+                        if result.data.occupancy == 2
+                        {
+                            println("result.data.uuids: \(result.data.uuids)")
+                            self.twousersinchannel = true
+                            
 //                            if !self.sentData
 //                            {
 //                                self.sendData() // there are now two unique users in the channel, send data
 //                            }
-//                        }
-//                    }
-//                    else // Something failed
-//                    {
-//                        println("Error getting here now for transmit channel: \(error.errorData)")
-//                    }
-//                })
-//            }
-//            else if event.data.presenceEvent == "leave"
-//            {
-//
-//            }
+                        }
+                    }
+                    else // Something failed
+                    {
+                        println("Error getting here now for transmit channel: \(error.errorData)")
+                    }
+                })
+            }
+            else if event.data.presenceEvent == "leave"
+            {
+                twousersinchannel = false
+            }
         }
     }
     
@@ -163,15 +145,6 @@ class PaerStream: NSObject, PNObjectEventListener
         }
     }
     
-    func checkTransferStatus()
-    {
-        if sentData && receivedData
-        {
-            delegate.didFinishTransfer(self, friendOffer: friendOffer, success: true)
-            
-            //client.unsubscribeFromChannels([channelName], withPresence: true) // We're done! Leave channel
-        }
-    }
     
     func formChannelName()
     {
