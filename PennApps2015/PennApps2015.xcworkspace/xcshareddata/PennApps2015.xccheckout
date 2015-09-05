@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B1144055-F4CD-4A69-8A64-FC3A1841510E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PennApps2015</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>40AED2ADAAE6567885E7C5D15B28C36BCB329C38</key>
+		<string>github.com:ctong1234/PennApps2015.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PennApps2015/PennApps2015.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>40AED2ADAAE6567885E7C5D15B28C36BCB329C38</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ctong1234/PennApps2015.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>40AED2ADAAE6567885E7C5D15B28C36BCB329C38</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>40AED2ADAAE6567885E7C5D15B28C36BCB329C38</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PennApps2015</string>
+		</dict>
+	</array>
+</dict>
+</plist>
