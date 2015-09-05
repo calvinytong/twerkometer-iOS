@@ -23,6 +23,8 @@ class PaerStream: NSObject, PNObjectEventListener
     var channelName : String = ""
     var twousersinchannel : Bool = false
     
+    var dataToSend : [String: AnyObject] = Dictionary<String, AnyObject>()
+    
     var delegate : PaerStreamDelegate!
     
     /**Connect to PubNub and prepare the class channel setup.*/
@@ -43,8 +45,11 @@ class PaerStream: NSObject, PNObjectEventListener
     }
     
     /**Send data over channel.*/
-    func sendData(dataToSend : [String: AnyObject])
+    func sendData(dataToSend :  Dictionary<String, AnyObject>)
     {
+        self.dataToSend = dataToSend
+        var uuidstring = UIDevice.currentDevice().identifierForVendor.UUIDString
+        self.dataToSend["uuid"] = uuidstring
         client.publish(dataToSend, toChannel: channelName, compressed: false, withCompletion: {
             (status: PNPublishStatus!) -> Void in
             
