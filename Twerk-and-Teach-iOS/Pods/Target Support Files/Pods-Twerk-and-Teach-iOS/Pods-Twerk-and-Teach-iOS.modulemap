@@ -1,0 +1,6 @@
+framework module Pods_Twerk_and_Teach_iOS {
+  umbrella header "Pods-Twerk-and-Teach-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */; };
+		3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0221EC1B9ADCC4008CD051 /* ViewController.swift */; };
+		3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0221EE1B9ADCC4008CD051 /* Main.storyboard */; };
+		3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0221F11B9ADCC4008CD051 /* Images.xcassets */; };
+		3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */; };
+		3E0222011B9ADCC4008CD051 /* Twerk_and_Teach_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0222001B9ADCC4008CD051 /* Twerk_and_Teach_iOSTests.swift */; };
+		3E02220C1B9ADD29008CD051 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02220A1B9ADD29008CD051 /* Bolts.framework */; };
+		3E02220D1B9ADD29008CD051 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02220B1B9ADD29008CD051 /* Parse.framework */; };
+		3E02220F1B9ADD33008CD051 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02220E1B9ADD33008CD051 /* Social.framework */; };
+		3E0222111B9ADD38008CD051 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222101B9ADD38008CD051 /* Accounts.framework */; };
+		3E0222131B9ADD40008CD051 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222121B9ADD40008CD051 /* libsqlite3.dylib */; };
+		3E0222151B9ADD45008CD051 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222141B9ADD45008CD051 /* libz.dylib */; };
+		3E0222171B9ADD4C008CD051 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222161B9ADD4C008CD051 /* SystemConfiguration.framework */; };
+		3E0222191B9ADD51008CD051 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222181B9ADD51008CD051 /* StoreKit.framework */; };
+		3E02221B1B9ADD59008CD051 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02221A1B9ADD59008CD051 /* Security.framework */; };
+		3E02221D1B9ADD5F008CD051 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02221C1B9ADD5F008CD051 /* QuartzCore.framework */; };
+		3E02221F1B9ADD65008CD051 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02221E1B9ADD65008CD051 /* CoreLocation.framework */; };
+		3E0222211B9ADD69008CD051 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222201B9ADD69008CD051 /* CoreGraphics.framework */; };
+		3E0222231B9ADD6E008CD051 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222221B9ADD6E008CD051 /* CFNetwork.framework */; };
+		3E0222251B9ADD73008CD051 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222241B9ADD73008CD051 /* AudioToolbox.framework */; };
+		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
+		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
+		3EA1C17E1B9ADE7200D6AC86 /* PaerTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */; };
+		3EA1C17F1B9ADE7200D6AC86 /* PaerTransferDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */; };
+		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
+		3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */; };
+		3EA1C1821B9ADE7200D6AC86 /* PaerUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */; };
+		3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */; };
+		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E0221FB1B9ADCC4008CD051 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0221DD1B9ADCC4008CD051 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0221E41B9ADCC4008CD051;
+			remoteInfo = "Twerk-and-Teach-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01488AC837C5D36AA7986380 /* Pods-Twerk-and-Teach-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twerk_and_Teach_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0221E51B9ADCC4008CD051 /* Twerk-and-Teach-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twerk-and-Teach-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0221E91B9ADCC4008CD051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E0221EC1B9ADCC4008CD051 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E0221EF1B9ADCC4008CD051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E0221F11B9ADCC4008CD051 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3E0221F41B9ADCC4008CD051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3E0221FA1B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Twerk-and-Teach-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0221FF1B9ADCC4008CD051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0222001B9ADCC4008CD051 /* Twerk_and_Teach_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twerk_and_Teach_iOSTests.swift; sourceTree = "<group>"; };
+		3E02220A1B9ADD29008CD051 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3E02220B1B9ADD29008CD051 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3E02220E1B9ADD33008CD051 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3E0222101B9ADD38008CD051 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3E0222121B9ADD40008CD051 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3E0222141B9ADD45008CD051 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3E0222161B9ADD4C008CD051 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3E0222181B9ADD51008CD051 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3E02221A1B9ADD59008CD051 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3E02221C1B9ADD5F008CD051 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E02221E1B9ADD65008CD051 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3E0222201B9ADD69008CD051 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E0222221B9ADD6E008CD051 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E0222241B9ADD73008CD051 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
+		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
+		3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerTransfer.swift; sourceTree = "<group>"; };
+		3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerTransferDelegate.swift; sourceTree = "<group>"; };
+		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
+		3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStreamDelegate.swift; sourceTree = "<group>"; };
+		3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerUIDelegate.swift; sourceTree = "<group>"; };
+		3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerManager.swift; sourceTree = "<group>"; };
+		3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twerk-and-Teach-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E0221E21B9ADCC4008CD051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0222251B9ADD73008CD051 /* AudioToolbox.framework in Frameworks */,
+				3E0222231B9ADD6E008CD051 /* CFNetwork.framework in Frameworks */,
+				3E0222211B9ADD69008CD051 /* CoreGraphics.framework in Frameworks */,
+				3E02221F1B9ADD65008CD051 /* CoreLocation.framework in Frameworks */,
+				3E02221D1B9ADD5F008CD051 /* QuartzCore.framework in Frameworks */,
+				3E02221B1B9ADD59008CD051 /* Security.framework in Frameworks */,
+				3E0222191B9ADD51008CD051 /* StoreKit.framework in Frameworks */,
+				3E0222171B9ADD4C008CD051 /* SystemConfiguration.framework in Frameworks */,
+				3E0222151B9ADD45008CD051 /* libz.dylib in Frameworks */,
+				3E0222131B9ADD40008CD051 /* libsqlite3.dylib in Frameworks */,
+				3E0222111B9ADD38008CD051 /* Accounts.framework in Frameworks */,
+				3E02220F1B9ADD33008CD051 /* Social.framework in Frameworks */,
+				3E02220D1B9ADD29008CD051 /* Parse.framework in Frameworks */,
+				3E02220C1B9ADD29008CD051 /* Bolts.framework in Frameworks */,
+				9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0221F71B9ADCC4008CD051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2950777318DEB671B6317F4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01488AC837C5D36AA7986380 /* Pods-Twerk-and-Teach-iOS.debug.xcconfig */,
+				D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E0221DC1B9ADCC4008CD051 = {
+			isa = PBXGroup;
+			children = (
+				3E0221E71B9ADCC4008CD051 /* Twerk-and-Teach-iOS */,
+				3E0221FD1B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests */,
+				3E0221E61B9ADCC4008CD051 /* Products */,
+				2950777318DEB671B6317F4F /* Pods */,
+				648C491DBB15D0772D7EB34E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E0221E61B9ADCC4008CD051 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E0221E51B9ADCC4008CD051 /* Twerk-and-Teach-iOS.app */,
+				3E0221FA1B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E0221E71B9ADCC4008CD051 /* Twerk-and-Teach-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */,
+				3E0221EC1B9ADCC4008CD051 /* ViewController.swift */,
+				3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */,
+				3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */,
+				3EA1C1761B9ADE7200D6AC86 /* PaerTransfer.swift */,
+				3EA1C1771B9ADE7200D6AC86 /* PaerTransferDelegate.swift */,
+				3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */,
+				3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */,
+				3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */,
+				3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */,
+				3E0221EE1B9ADCC4008CD051 /* Main.storyboard */,
+				3E0221F11B9ADCC4008CD051 /* Images.xcassets */,
+				3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */,
+				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
+				3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */,
+			);
+			path = "Twerk-and-Teach-iOS";
+			sourceTree = "<group>";
+		};
+		3E0221E81B9ADCC4008CD051 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E0222241B9ADD73008CD051 /* AudioToolbox.framework */,
+				3E0222221B9ADD6E008CD051 /* CFNetwork.framework */,
+				3E0222201B9ADD69008CD051 /* CoreGraphics.framework */,
+				3E02221E1B9ADD65008CD051 /* CoreLocation.framework */,
+				3E02221C1B9ADD5F008CD051 /* QuartzCore.framework */,
+				3E02221A1B9ADD59008CD051 /* Security.framework */,
+				3E0222181B9ADD51008CD051 /* StoreKit.framework */,
+				3E0222161B9ADD4C008CD051 /* SystemConfiguration.framework */,
+				3E0222141B9ADD45008CD051 /* libz.dylib */,
+				3E0222121B9ADD40008CD051 /* libsqlite3.dylib */,
+				3E0222101B9ADD38008CD051 /* Accounts.framework */,
+				3E02220E1B9ADD33008CD051 /* Social.framework */,
+				3E02220A1B9ADD29008CD051 /* Bolts.framework */,
+				3E02220B1B9ADD29008CD051 /* Parse.framework */,
+				3E0221E91B9ADCC4008CD051 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E0221FD1B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E0222001B9ADCC4008CD051 /* Twerk_and_Teach_iOSTests.swift */,
+				3E0221FE1B9ADCC4008CD051 /* Supporting Files */,
+			);
+			path = "Twerk-and-Teach-iOSTests";
+			sourceTree = "<group>";
+		};
+		3E0221FE1B9ADCC4008CD051 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E0221FF1B9ADCC4008CD051 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		648C491DBB15D0772D7EB34E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E0221E41B9ADCC4008CD051 /* Twerk-and-Teach-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0222041B9ADCC4008CD051 /* Build configuration list for PBXNativeTarget "Twerk-and-Teach-iOS" */;
+			buildPhases = (
+				0E0AB34E4E57D9BDFFB4AF77 /* Check Pods Manifest.lock */,
+				3E0221E11B9ADCC4008CD051 /* Sources */,
+				3E0221E21B9ADCC4008CD051 /* Frameworks */,
+				3E0221E31B9ADCC4008CD051 /* Resources */,
+				22F90A123220961B0E6D4B71 /* Embed Pods Frameworks */,
+				297CD359E6765913DB731B64 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Twerk-and-Teach-iOS";
+			productName = "Twerk-and-Teach-iOS";
+			productReference = 3E0221E51B9ADCC4008CD051 /* Twerk-and-Teach-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E0221F91B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0222071B9ADCC4008CD051 /* Build configuration list for PBXNativeTarget "Twerk-and-Teach-iOSTests" */;
+			buildPhases = (
+				3E0221F61B9ADCC4008CD051 /* Sources */,
+				3E0221F71B9ADCC4008CD051 /* Frameworks */,
+				3E0221F81B9ADCC4008CD051 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E0221FC1B9ADCC4008CD051 /* PBXTargetDependency */,
+			);
+			name = "Twerk-and-Teach-iOSTests";
+			productName = "Twerk-and-Teach-iOSTests";
+			productReference = 3E0221FA1B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E0221DD1B9ADCC4008CD051 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Calvin;
+				TargetAttributes = {
+					3E0221E41B9ADCC4008CD051 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					3E0221F91B9ADCC4008CD051 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 3E0221E41B9ADCC4008CD051;
+					};
+				};
+			};
+			buildConfigurationList = 3E0221E01B9ADCC4008CD051 /* Build configuration list for PBXProject "Twerk-and-Teach-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E0221DC1B9ADCC4008CD051;
+			productRefGroup = 3E0221E61B9ADCC4008CD051 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E0221E41B9ADCC4008CD051 /* Twerk-and-Teach-iOS */,
+				3E0221F91B9ADCC4008CD051 /* Twerk-and-Teach-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E0221E31B9ADCC4008CD051 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */,
+				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
+				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0221F81B9ADCC4008CD051 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E0AB34E4E57D9BDFFB4AF77 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22F90A123220961B0E6D4B71 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		297CD359E6765913DB731B64 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E0221E11B9ADCC4008CD051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA1C17E1B9ADE7200D6AC86 /* PaerTransfer.swift in Sources */,
+				3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */,
+				3EA1C1821B9ADE7200D6AC86 /* PaerUIDelegate.swift in Sources */,
+				3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */,
+				3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */,
+				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
+				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
+				3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */,
+				3EA1C17F1B9ADE7200D6AC86 /* PaerTransferDelegate.swift in Sources */,
+				3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0221F61B9ADCC4008CD051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0222011B9ADCC4008CD051 /* Twerk_and_Teach_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E0221FC1B9ADCC4008CD051 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0221E41B9ADCC4008CD051 /* Twerk-and-Teach-iOS */;
+			targetProxy = 3E0221FB1B9ADCC4008CD051 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E0221EE1B9ADCC4008CD051 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E0221EF1B9ADCC4008CD051 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E0221F41B9ADCC4008CD051 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E0222021B9ADCC4008CD051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E0222031B9ADCC4008CD051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E0222051B9ADCC4008CD051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01488AC837C5D36AA7986380 /* Pods-Twerk-and-Teach-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twerk-and-Teach-iOS",
+				);
+				INFOPLIST_FILE = "Twerk-and-Teach-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twerk-and-Teach-iOS/Twerk-and-Teach-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E0222061B9ADCC4008CD051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Twerk-and-Teach-iOS",
+				);
+				INFOPLIST_FILE = "Twerk-and-Teach-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Twerk-and-Teach-iOS/Twerk-and-Teach-iOS-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		3E0222081B9ADCC4008CD051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Twerk-and-Teach-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twerk-and-Teach-iOS.app/Twerk-and-Teach-iOS";
+			};
+			name = Debug;
+		};
+		3E0222091B9ADCC4008CD051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Twerk-and-Teach-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twerk-and-Teach-iOS.app/Twerk-and-Teach-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E0221E01B9ADCC4008CD051 /* Build configuration list for PBXProject "Twerk-and-Teach-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0222021B9ADCC4008CD051 /* Debug */,
+				3E0222031B9ADCC4008CD051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E0222041B9ADCC4008CD051 /* Build configuration list for PBXNativeTarget "Twerk-and-Teach-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0222051B9ADCC4008CD051 /* Debug */,
+				3E0222061B9ADCC4008CD051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E0222071B9ADCC4008CD051 /* Build configuration list for PBXNativeTarget "Twerk-and-Teach-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0222081B9ADCC4008CD051 /* Debug */,
+				3E0222091B9ADCC4008CD051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E0221DD1B9ADCC4008CD051 /* Project object */;
+}

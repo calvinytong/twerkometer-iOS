@@ -27,11 +27,11 @@ class ViewController: UIViewController, PaerUIDelegate
 
     @IBAction func Go(sender: AnyObject)
     {
-//        var paer = PaerManager(dictToSend: ["stuff": "things"])
-//        paer.delegate = self
-//        paer.start()
-        var stream = PaerStream(localMajor: 1, localMinor: 1, foreignMajor: 1, foreignMinor: 1)
-        stream.sendData(["Hi" : "Hello"])
+        var paer = PaerManager(dictToSend: ["stuff": "things"])
+        paer.delegate = self
+        paer.start()
+//        var stream = PaerStream(localMajor: 1, localMinor: 1, foreignMajor: 1, foreignMinor: 1)
+//        stream.sendData(["Hi" : "Hello"])
     }
     
     func paerStarted() {

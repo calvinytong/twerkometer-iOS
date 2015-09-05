@@ -36,7 +36,6 @@
 		410F49AC1B9AD094008FF3E3 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F49AA1B9AD094008FF3E3 /* twerkClass.swift */; };
 		410F49AD1B9AD094008FF3E3 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F49AB1B9AD094008FF3E3 /* TwerkViewController.swift */; };
 		411636871B9AD30C00977121 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411636861B9AD30C00977121 /* ParseUI.framework */; };
-		DBE62DB3524879712D82FA72 /* Pods_PennApps2015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859F1CD9C1154FB2FD7234DB /* Pods_PennApps2015.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +108,6 @@
 				3EEC98B21B9A7A1C00D2D9A4 /* AudioToolbox.framework in Frameworks */,
 				3EEC98CB1B9A7A7100D2D9A4 /* Bolts.framework in Frameworks */,
 				3EEC98CC1B9A7A7100D2D9A4 /* Parse.framework in Frameworks */,
-				DBE62DB3524879712D82FA72 /* Pods_PennApps2015.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

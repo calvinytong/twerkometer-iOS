@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E24775CDE4AC7F4419063F6D"
+               BlueprintIdentifier = "46081D7EEF5A3A9CD4629BE9"
                BuildableName = "Pods_PennApps2015.framework"
                BlueprintName = "Pods-PennApps2015"
                ReferencedContainer = "container:Pods.xcodeproj">
