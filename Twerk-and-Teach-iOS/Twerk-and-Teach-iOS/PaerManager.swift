@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 import CoreBluetooth
 import CoreLocation
-//import AddressBook
 import AudioToolbox
 
-class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDelegate, PaerStreamDelegate, PaerTransferDelegate {
+class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDelegate, PaerStreamDelegate {
     let uuidObject = NSUUID(UUIDString: "ADAC4BC0-8068-463C-B4CB-6CEE98B950A2")
     
     var identifier : String = "bitmachine-twerk"
@@ -51,8 +50,6 @@ class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDele
     var timeoutTimer : NSTimer!
     var timeoutInterval : Double = 60.0
     
-    /** the object which will facilitate the handling of received data */
-    var paerTransfer : PaerTransfer!
     
     var delegate : PaerUIDelegate!
     
@@ -231,6 +228,8 @@ class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDele
                     
                     paerStream.delegate = self
                     
+                    //post a notification that the channel has been created
+                    NSNotificationCenter.defaultCenter().postNotificationName("channelcreated", object: paerStream)
                     // yay magic, let's save the location for the PaerLog
                     locationOfPaer = manager.location
                 }
@@ -255,11 +254,7 @@ class PaerManager : NSObject, CBPeripheralManagerDelegate, CLLocationManagerDele
         println("Transfer finished")
         println("Received dict: \(friendOffer)")
         
-        // proccess the data and connect to friend's networks / contact
-        paerTransfer = PaerTransfer(userOffer: dataToSend, friendOffer: friendOffer)
-        paerTransfer.delegate = self
-        
-        stopBeacons() // No need for beacons now
+        // No need for beacons now
     }
     
     func didExitStream(stream: PaerStream, success: Bool) {
