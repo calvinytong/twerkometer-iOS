@@ -33,6 +33,9 @@
 		3EEC98C81B9A7A5700D2D9A4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEC98C71B9A7A5700D2D9A4 /* Social.framework */; };
 		3EEC98CB1B9A7A7100D2D9A4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEC98C91B9A7A7100D2D9A4 /* Bolts.framework */; };
 		3EEC98CC1B9A7A7100D2D9A4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEC98CA1B9A7A7100D2D9A4 /* Parse.framework */; };
+		410F49AC1B9AD094008FF3E3 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F49AA1B9AD094008FF3E3 /* twerkClass.swift */; };
+		410F49AD1B9AD094008FF3E3 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410F49AB1B9AD094008FF3E3 /* TwerkViewController.swift */; };
+		411636871B9AD30C00977121 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411636861B9AD30C00977121 /* ParseUI.framework */; };
 		DBE62DB3524879712D82FA72 /* Pods_PennApps2015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859F1CD9C1154FB2FD7234DB /* Pods_PennApps2015.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,9 @@
 		3EEC98C71B9A7A5700D2D9A4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		3EEC98C91B9A7A7100D2D9A4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../Downloads/parse-library-1.8.2/Bolts.framework"; sourceTree = "<group>"; };
 		3EEC98CA1B9A7A7100D2D9A4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../Downloads/parse-library-1.8.2/Parse.framework"; sourceTree = "<group>"; };
+		410F49AA1B9AD094008FF3E3 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
+		410F49AB1B9AD094008FF3E3 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
+		411636861B9AD30C00977121 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.8.2/ParseUI.framework"; sourceTree = "<group>"; };
 		859F1CD9C1154FB2FD7234DB /* Pods_PennApps2015.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PennApps2015.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC2A2B4552E5DD68C449D5BC /* Pods-PennApps2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennApps2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-PennApps2015/Pods-PennApps2015.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +100,7 @@
 				3EEC98C21B9A7A4700D2D9A4 /* libz.dylib in Frameworks */,
 				3EEC98C01B9A7A4000D2D9A4 /* SystemConfiguration.framework in Frameworks */,
 				3EEC98BE1B9A7A3A00D2D9A4 /* StoreKit.framework in Frameworks */,
+				411636871B9AD30C00977121 /* ParseUI.framework in Frameworks */,
 				3EEC98BC1B9A7A3500D2D9A4 /* Security.framework in Frameworks */,
 				3EEC98BA1B9A7A3000D2D9A4 /* QuartzCore.framework in Frameworks */,
 				3EEC98B81B9A7A2C00D2D9A4 /* CoreLocation.framework in Frameworks */,
@@ -158,6 +165,8 @@
 				3EEC98951B9A6DB100D2D9A4 /* Main.storyboard */,
 				3EEC98981B9A6DB100D2D9A4 /* Images.xcassets */,
 				3EEC989A1B9A6DB100D2D9A4 /* LaunchScreen.xib */,
+				410F49AA1B9AD094008FF3E3 /* twerkClass.swift */,
+				410F49AB1B9AD094008FF3E3 /* TwerkViewController.swift */,
 				3E56215D1B9ABEC00073AB31 /* PaerTransfer.swift */,
 				3E56215E1B9ABEC00073AB31 /* PaerTransferDelegate.swift */,
 				3E5621631B9ABECD0073AB31 /* PaerStream.swift */,
@@ -198,6 +207,7 @@
 		5C247BF9F2DA60B8CD75F5DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				411636861B9AD30C00977121 /* ParseUI.framework */,
 				859F1CD9C1154FB2FD7234DB /* Pods_PennApps2015.framework */,
 			);
 			name = Frameworks;
@@ -365,12 +375,14 @@
 			files = (
 				3E5621681B9ABECD0073AB31 /* PaerUIDelegate.swift in Sources */,
 				3EEC98941B9A6DB100D2D9A4 /* ViewController.swift in Sources */,
+				410F49AD1B9AD094008FF3E3 /* TwerkViewController.swift in Sources */,
 				3E5621671B9ABECD0073AB31 /* PaerStreamDelegate.swift in Sources */,
 				3E5621661B9ABECD0073AB31 /* PaerStream.swift in Sources */,
 				3E5621611B9ABEC00073AB31 /* PaerTransferDelegate.swift in Sources */,
 				3E5621601B9ABEC00073AB31 /* PaerTransfer.swift in Sources */,
 				3EEC98921B9A6DB100D2D9A4 /* AppDelegate.swift in Sources */,
 				3E56216A1B9ABEDB0073AB31 /* PaerManager.swift in Sources */,
+				410F49AC1B9AD094008FF3E3 /* twerkClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +516,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/calvin/Downloads/parse-library-1.8.2",
+					"$(PROJECT_DIR)/parse-library-1.8.2",
 				);
 				INFOPLIST_FILE = PennApps2015/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -523,6 +536,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/calvin/Downloads/parse-library-1.8.2",
+					"$(PROJECT_DIR)/parse-library-1.8.2",
 				);
 				INFOPLIST_FILE = PennApps2015/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

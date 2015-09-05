@@ -14,8 +14,6 @@ class ViewController: UIViewController, PaerUIDelegate
 
     @IBOutlet weak var Go: UIButton!
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
