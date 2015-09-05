@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -512,23 +512,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrh-Mi-nam">
-                                <rect key="frame" x="31" y="515" width="33" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="start:" destination="Qxl-rV-KDS" eventType="touchUpInside" id="jUx-J9-8VC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-3B-nwO">
-                                <rect key="frame" x="72" y="515" width="35" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYK-Iu-7HF">
                                 <rect key="frame" x="16" y="28" width="568" height="72"/>
                                 <constraints>
@@ -564,39 +547,28 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKu-Th-1AN">
-                                <rect key="frame" x="115" y="515" width="41" height="30"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CbN-Wp-NS7" firstAttribute="top" secondItem="Yeg-co-ZqC" secondAttribute="bottom" constant="8" symbolic="YES" id="25a-yg-214"/>
                             <constraint firstItem="IYK-Iu-7HF" firstAttribute="top" secondItem="Pyf-ef-VWg" secondAttribute="bottom" constant="8" symbolic="YES" id="5ij-6k-iJD"/>
-                            <constraint firstItem="IKu-Th-1AN" firstAttribute="leading" secondItem="HRm-3B-nwO" secondAttribute="trailing" constant="8" symbolic="YES" id="ADJ-jQ-bpC"/>
                             <constraint firstItem="CbN-Wp-NS7" firstAttribute="trailing" secondItem="Yeg-co-ZqC" secondAttribute="trailing" id="Pi7-Tp-58Y"/>
                             <constraint firstItem="egS-LQ-7Tx" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" id="Qxi-PZ-yyz"/>
                             <constraint firstItem="Yeg-co-ZqC" firstAttribute="leading" secondItem="CbN-Wp-NS7" secondAttribute="leading" id="SGw-XX-qgh"/>
-                            <constraint firstItem="HRm-3B-nwO" firstAttribute="leading" secondItem="Hrh-Mi-nam" secondAttribute="trailing" constant="8" symbolic="YES" id="UcC-oz-Bjw"/>
-                            <constraint firstItem="IKu-Th-1AN" firstAttribute="baseline" secondItem="HRm-3B-nwO" secondAttribute="baseline" id="b8j-15-qAS"/>
                             <constraint firstItem="egS-LQ-7Tx" firstAttribute="trailing" secondItem="VQM-oS-gC0" secondAttribute="trailingMargin" id="bH3-7D-5xh"/>
                             <constraint firstItem="egS-LQ-7Tx" firstAttribute="leading" secondItem="CbN-Wp-NS7" secondAttribute="leading" id="bbh-9s-pdy"/>
                             <constraint firstItem="Yeg-co-ZqC" firstAttribute="top" secondItem="IYK-Iu-7HF" secondAttribute="bottom" constant="8" symbolic="YES" id="f5E-iC-fmB"/>
                             <constraint firstItem="Yeg-co-ZqC" firstAttribute="trailing" secondItem="IYK-Iu-7HF" secondAttribute="trailing" id="fC4-7G-rfx"/>
-                            <constraint firstItem="vVo-Y5-6Np" firstAttribute="top" secondItem="Hrh-Mi-nam" secondAttribute="bottom" constant="55" id="hK2-xH-zRZ"/>
                             <constraint firstItem="CbN-Wp-NS7" firstAttribute="trailing" secondItem="egS-LQ-7Tx" secondAttribute="trailing" id="hke-8f-U1p"/>
                             <constraint firstItem="egS-LQ-7Tx" firstAttribute="top" secondItem="CbN-Wp-NS7" secondAttribute="bottom" constant="8" symbolic="YES" id="mXo-Vm-drd"/>
-                            <constraint firstItem="Hrh-Mi-nam" firstAttribute="leading" secondItem="VQM-oS-gC0" secondAttribute="leadingMargin" constant="15" id="pHY-Zp-71m"/>
                             <constraint firstItem="IYK-Iu-7HF" firstAttribute="leading" secondItem="Yeg-co-ZqC" secondAttribute="leading" id="so8-k7-7ZI"/>
-                            <constraint firstItem="HRm-3B-nwO" firstAttribute="baseline" secondItem="Hrh-Mi-nam" secondAttribute="baseline" id="zMt-Yb-iUw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="timeRemainingLabel" destination="Yeg-co-ZqC" id="OyU-Eu-xxe"/>
                         <outlet property="twerkCount" destination="egS-LQ-7Tx" id="EpH-P5-6l8"/>
+                        <segue destination="dyb-tc-tfc" kind="show" identifier="SegueToLostViewController" id="HBQ-xK-bOB"/>
+                        <segue destination="kdT-fO-wOs" kind="show" identifier="SegueToWonViewController" id="mhV-az-0S6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEw-Ju-D56" sceneMemberID="firstResponder"/>

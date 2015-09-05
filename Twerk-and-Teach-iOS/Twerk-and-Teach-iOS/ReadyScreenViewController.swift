@@ -20,6 +20,17 @@ class ReadyScreenViewController : UIViewController
     
     @IBAction func Start(sender: AnyObject)
     {
-        
+        if stream.pOne.ready + stream.pTwo.ready == 2 {
+            performSegueWithIdentifier("SegueToTwerkViewController", sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueToTwerkViewController"
+        {
+            var dvc = segue.destinationViewController as! TwerkViewController
+            dvc.stream = sender as! PaerStream!
+            
+        }
     }
 }
