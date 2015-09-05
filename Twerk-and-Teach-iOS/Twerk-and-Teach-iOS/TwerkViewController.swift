@@ -33,16 +33,18 @@ class TwerkViewController: UIViewController {
     
     
     @IBAction func start(sender: AnyObject) {
-        twerkInstance.twerkMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) -> Void in
-            self.twerkInstance.outputAccelerationData(accelerometerData.acceleration)
-            self.twerkCount?.text = "\(self.twerkInstance.shakeCount)"
-            if (error != nil) {
-                println("\(error)")
-            }
-        })
-        
-        twerkInstance.timer = NSTimer(timeInterval: 1.0, target: self, selector: "countDown", userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(twerkInstance.timer, forMode: NSRunLoopCommonModes)
+        if (twerkInstance.timeRemaining > 0) {
+            twerkInstance.twerkMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) -> Void in
+                self.twerkInstance.outputAccelerationData(accelerometerData.acceleration)
+                self.twerkCount?.text = "\(self.twerkInstance.shakeCount)"
+                if (error != nil) {
+                    println("\(error)")
+                }
+            })
+            
+            twerkInstance.timer = NSTimer(timeInterval: 1.0, target: self, selector: "countDown", userInfo: nil, repeats: true)
+            NSRunLoop.currentRunLoop().addTimer(twerkInstance.timer, forMode: NSRunLoopCommonModes)
+        }
     }
     
     func countDown() {
