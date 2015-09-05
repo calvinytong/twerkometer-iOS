@@ -36,10 +36,7 @@
 		3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */; };
 		3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1891B9B111500D6AC86 /* ParseManager.swift */; };
 		3EA1C18C1B9B12FD00D6AC86 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C18B1B9B12FD00D6AC86 /* StartScreenViewController.swift */; };
-		4276C7BA1B9B2E39007FA4DB /* LobsterTwo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4276C7B61B9B2E39007FA4DB /* LobsterTwo-Bold.otf */; };
-		4276C7BB1B9B2E39007FA4DB /* LobsterTwo-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4276C7B71B9B2E39007FA4DB /* LobsterTwo-BoldItalic.otf */; };
-		4276C7BC1B9B2E39007FA4DB /* LobsterTwo-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4276C7B81B9B2E39007FA4DB /* LobsterTwo-Italic.otf */; };
-		4276C7BD1B9B2E39007FA4DB /* LobsterTwo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4276C7B91B9B2E39007FA4DB /* LobsterTwo-Regular.otf */; };
+		414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */; };
 		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -90,10 +87,11 @@
 		3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		3EA1C1891B9B111500D6AC86 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		3EA1C18B1B9B12FD00D6AC86 /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
-		4276C7B61B9B2E39007FA4DB /* LobsterTwo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Bold.otf"; path = "../../../../Downloads/lobster-two/LobsterTwo-Bold.otf"; sourceTree = "<group>"; };
-		4276C7B71B9B2E39007FA4DB /* LobsterTwo-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-BoldItalic.otf"; path = "../../../../Downloads/lobster-two/LobsterTwo-BoldItalic.otf"; sourceTree = "<group>"; };
-		4276C7B81B9B2E39007FA4DB /* LobsterTwo-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Italic.otf"; path = "../../../../Downloads/lobster-two/LobsterTwo-Italic.otf"; sourceTree = "<group>"; };
-		4276C7B91B9B2E39007FA4DB /* LobsterTwo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LobsterTwo-Regular.otf"; path = "../../../../Downloads/lobster-two/LobsterTwo-Regular.otf"; sourceTree = "<group>"; };
+		414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Nessie-iOS-Wrapper"; path = "../../Nessie-iOS-Wrapper"; sourceTree = "<group>"; };
+		414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
+		414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
+		414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
 		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,11 +172,11 @@
 				3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */,
 				3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */,
 				3E0221EE1B9ADCC4008CD051 /* Main.storyboard */,
-				4276C7B61B9B2E39007FA4DB /* LobsterTwo-Bold.otf */,
-				4276C7B71B9B2E39007FA4DB /* LobsterTwo-BoldItalic.otf */,
-				4276C7B81B9B2E39007FA4DB /* LobsterTwo-Italic.otf */,
-				4276C7B91B9B2E39007FA4DB /* LobsterTwo-Regular.otf */,
 				3E0221F11B9ADCC4008CD051 /* Images.xcassets */,
+				414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */,
+				414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */,
+				414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */,
+				414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */,
 				3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
 				3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */,
@@ -189,6 +187,7 @@
 		3E0221E81B9ADCC4008CD051 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */,
 				3E0222241B9ADD73008CD051 /* AudioToolbox.framework */,
 				3E0222221B9ADD6E008CD051 /* CFNetwork.framework */,
 				3E0222201B9ADD69008CD051 /* CoreGraphics.framework */,
@@ -316,13 +315,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4276C7BC1B9B2E39007FA4DB /* LobsterTwo-Italic.otf in Resources */,
-				4276C7BB1B9B2E39007FA4DB /* LobsterTwo-BoldItalic.otf in Resources */,
 				3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */,
-				4276C7BA1B9B2E39007FA4DB /* LobsterTwo-Bold.otf in Resources */,
-				4276C7BD1B9B2E39007FA4DB /* LobsterTwo-Regular.otf in Resources */,
 				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
 				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
+				414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
