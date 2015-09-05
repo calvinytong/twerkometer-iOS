@@ -1,31 +1,25 @@
 //
-//  ViewController.swift
+//  ChallengeViewController.swift
 //  Twerk-and-Teach-iOS
 //
 //  Created by Calvin on 9/5/15.
 //  Copyright (c) 2015 Calvin. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController, PaerUIDelegate {
-
-    @IBOutlet weak var GoButton: UIButton!
-
-
-    override func viewDidLoad() {
+class ChallengeViewController : UIViewController, PaerUIDelegate
+{
+    @IBOutlet weak var challengebutton: UIButton!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "channelcreated:", name: "channelcreated", object: nil)
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.challengebutton.layer.cornerRadius = self.challengebutton.bounds.size.width/2.0;
     }
     
-    
-    @IBAction func Range(sender: AnyObject)
+    @IBAction func challenge(sender: AnyObject)
     {
         var paer = PaerManager()
         paer.delegate = self
@@ -34,19 +28,21 @@ class ViewController: UIViewController, PaerUIDelegate {
     
     func channelcreated(notification: NSNotification)
     {
-        performSegueWithIdentifier("SegueToDataSend", sender: notification.object)
+        performSegueWithIdentifier("SegueToPlayerFound", sender: notification.object)
         NSNotificationCenter.defaultCenter().removeObserver(notification)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SegueToDataSend"
+        if segue.identifier == "SegueToPlayerFound"
         {
-            var dvc = segue.destinationViewController as! DataSendTest
+            var dvc = segue.destinationViewController as! PlayerFoundViewController
             dvc.stream = sender as! PaerStream
             
         }
     }
+
     
+    //delegate methods don't do much just here because hackathon
     func paerStarted() {
         println("UI Received: Paer Started")
     }
@@ -73,4 +69,3 @@ class ViewController: UIViewController, PaerUIDelegate {
 
     
 }
-

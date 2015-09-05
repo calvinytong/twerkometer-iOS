@@ -27,6 +27,12 @@
 		3E0222211B9ADD69008CD051 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222201B9ADD69008CD051 /* CoreGraphics.framework */; };
 		3E0222231B9ADD6E008CD051 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222221B9ADD6E008CD051 /* CFNetwork.framework */; };
 		3E0222251B9ADD73008CD051 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E0222241B9ADD73008CD051 /* AudioToolbox.framework */; };
+		3E7CC18A1B9B8DF1002AF667 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1891B9B8DF1002AF667 /* RegisterViewController.swift */; };
+		3E7CC18C1B9B91EC002AF667 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC18B1B9B91EC002AF667 /* LoginViewController.swift */; };
+		3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC18D1B9B9641002AF667 /* ChallengeViewController.swift */; };
+		3E7CC1901B9B9900002AF667 /* PlayerFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */; };
+		3E7CC1921B9B99B7002AF667 /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1911B9B99B7002AF667 /* BetViewController.swift */; };
+		3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
@@ -35,8 +41,13 @@
 		3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */; };
 		3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */; };
 		3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1891B9B111500D6AC86 /* ParseManager.swift */; };
-		3EA1C18C1B9B12FD00D6AC86 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C18B1B9B12FD00D6AC86 /* StartScreenViewController.swift */; };
 		414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */; };
+		414F6F151B9B7666008A9E7F /* for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F141B9B7666008A9E7F /* for tech.png */; };
+		414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F161B9B7713008A9E7F /* for tech italicized.png */; };
+		414F6F191B9B7951008A9E7F /* White Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F181B9B7951008A9E7F /* White Circle.png */; };
+		4169007B1B9B895B00282E0B /* playerstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007A1B9B895B00282E0B /* playerstruct.swift */; };
+		4169007F1B9B899700282E0B /* DataSendTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007E1B9B899700282E0B /* DataSendTest.swift */; };
+		416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 416900801B9B8C3B00282E0B /* twerk for tech.png */; };
 		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,6 +88,12 @@
 		3E0222201B9ADD69008CD051 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3E0222221B9ADD6E008CD051 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E0222241B9ADD73008CD051 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3E7CC1891B9B8DF1002AF667 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3E7CC18B1B9B91EC002AF667 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E7CC18D1B9B9641002AF667 /* ChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerFoundViewController.swift; sourceTree = "<group>"; };
+		3E7CC1911B9B99B7002AF667 /* BetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
+		3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
@@ -86,12 +103,17 @@
 		3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twerk-and-Teach-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		3EA1C1891B9B111500D6AC86 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
-		3EA1C18B1B9B12FD00D6AC86 /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Nessie-iOS-Wrapper"; path = "../../Nessie-iOS-Wrapper"; sourceTree = "<group>"; };
 		414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
 		414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Italic.ttf"; sourceTree = "<group>"; };
 		414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Regular.ttf"; sourceTree = "<group>"; };
+		414F6F141B9B7666008A9E7F /* for tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "for tech.png"; sourceTree = "<group>"; };
+		414F6F161B9B7713008A9E7F /* for tech italicized.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "for tech italicized.png"; sourceTree = "<group>"; };
+		414F6F181B9B7951008A9E7F /* White Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White Circle.png"; sourceTree = "<group>"; };
+		4169007A1B9B895B00282E0B /* playerstruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerstruct.swift; sourceTree = "<group>"; };
+		4169007E1B9B899700282E0B /* DataSendTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendTest.swift; sourceTree = "<group>"; };
+		416900801B9B8C3B00282E0B /* twerk for tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twerk for tech.png"; sourceTree = "<group>"; };
 		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +183,13 @@
 			isa = PBXGroup;
 			children = (
 				3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */,
-				3EA1C18B1B9B12FD00D6AC86 /* StartScreenViewController.swift */,
+				3E7CC1891B9B8DF1002AF667 /* RegisterViewController.swift */,
+				3E7CC18B1B9B91EC002AF667 /* LoginViewController.swift */,
+				3E7CC18D1B9B9641002AF667 /* ChallengeViewController.swift */,
+				3E7CC1911B9B99B7002AF667 /* BetViewController.swift */,
+				3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */,
+				3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */,
+				4169007E1B9B899700282E0B /* DataSendTest.swift */,
 				3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */,
 				3EA1C1891B9B111500D6AC86 /* ParseManager.swift */,
 				3E0221EC1B9ADCC4008CD051 /* ViewController.swift */,
@@ -171,8 +199,13 @@
 				3EA1C1791B9ADE7200D6AC86 /* PaerStreamDelegate.swift */,
 				3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */,
 				3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */,
+				4169007A1B9B895B00282E0B /* playerstruct.swift */,
 				3E0221EE1B9ADCC4008CD051 /* Main.storyboard */,
+				416900801B9B8C3B00282E0B /* twerk for tech.png */,
 				3E0221F11B9ADCC4008CD051 /* Images.xcassets */,
+				414F6F181B9B7951008A9E7F /* White Circle.png */,
+				414F6F141B9B7666008A9E7F /* for tech.png */,
+				414F6F161B9B7713008A9E7F /* for tech italicized.png */,
 				414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */,
 				414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */,
 				414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */,
@@ -315,8 +348,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414F6F151B9B7666008A9E7F /* for tech.png in Resources */,
 				3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */,
 				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
+				414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */,
+				414F6F191B9B7951008A9E7F /* White Circle.png in Resources */,
+				416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */,
 				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
 				414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */,
 			);
@@ -386,15 +423,22 @@
 			files = (
 				3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */,
 				3EA1C1821B9ADE7200D6AC86 /* PaerUIDelegate.swift in Sources */,
+				3E7CC1921B9B99B7002AF667 /* BetViewController.swift in Sources */,
+				4169007F1B9B899700282E0B /* DataSendTest.swift in Sources */,
+				3E7CC1901B9B9900002AF667 /* PlayerFoundViewController.swift in Sources */,
+				3E7CC18C1B9B91EC002AF667 /* LoginViewController.swift in Sources */,
 				3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */,
 				3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */,
 				3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */,
 				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
+				3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */,
+				3E7CC18A1B9B8DF1002AF667 /* RegisterViewController.swift in Sources */,
+				3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */,
 				3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */,
-				3EA1C18C1B9B12FD00D6AC86 /* StartScreenViewController.swift in Sources */,
 				3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */,
+				4169007B1B9B895B00282E0B /* playerstruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
