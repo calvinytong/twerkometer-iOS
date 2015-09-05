@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -25,6 +26,15 @@
                                     <action selector="Go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YxM-qv-bRs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRU-qW-SwQ">
+                                <rect key="frame" x="82" y="165" width="107" height="30"/>
+                                <state key="normal" title="To Kevin's Stuff">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NQj-kn-EST" kind="show" id="FxY-Ih-SIK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -34,6 +44,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Twerk View Controller-->
+        <scene sceneID="enx-dI-IUM">
+            <objects>
+                <viewController id="NQj-kn-EST" customClass="TwerkViewController" customModule="PennApps2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Pw-L5-BSi"/>
+                        <viewControllerLayoutGuide type="bottom" id="qN9-Cc-9lU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mor-rh-euU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-wB-CQb">
+                                <rect key="frame" x="16" y="20" width="128.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y23-Z3-VBb">
+                                <rect key="frame" x="151" y="20" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5d-Zm-54y">
+                                <rect key="frame" x="125" y="49" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twerk Count:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-pH-97m">
+                                <rect key="frame" x="16" y="48" width="101" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkA-st-ot5">
+                                <rect key="frame" x="16" y="76" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="NQj-kn-EST" eventType="touchUpInside" id="8PT-2l-Tvq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y5d-Zm-54y" firstAttribute="leading" secondItem="cHx-pH-97m" secondAttribute="trailing" constant="8" id="1JT-ZU-59w"/>
+                            <constraint firstItem="BBy-wB-CQb" firstAttribute="top" secondItem="6Pw-L5-BSi" secondAttribute="bottom" id="AuK-tu-Qwn"/>
+                            <constraint firstItem="cHx-pH-97m" firstAttribute="top" secondItem="y5d-Zm-54y" secondAttribute="top" constant="-1" id="BeO-fD-2Iu"/>
+                            <constraint firstItem="cHx-pH-97m" firstAttribute="leading" secondItem="Mor-rh-euU" secondAttribute="leadingMargin" id="KAV-3H-q5o"/>
+                            <constraint firstItem="y23-Z3-VBb" firstAttribute="leading" secondItem="BBy-wB-CQb" secondAttribute="trailing" constant="7" id="Kp3-f6-Vq9"/>
+                            <constraint firstItem="CkA-st-ot5" firstAttribute="top" secondItem="cHx-pH-97m" secondAttribute="bottom" constant="7" id="OAk-s9-7yf"/>
+                            <constraint firstItem="cHx-pH-97m" firstAttribute="top" secondItem="BBy-wB-CQb" secondAttribute="bottom" constant="8" id="Odx-9u-pJ5"/>
+                            <constraint firstItem="CkA-st-ot5" firstAttribute="leading" secondItem="Mor-rh-euU" secondAttribute="leadingMargin" id="jG2-Jy-x5l"/>
+                            <constraint firstItem="BBy-wB-CQb" firstAttribute="leading" secondItem="Mor-rh-euU" secondAttribute="leadingMargin" id="lSW-vO-F3N"/>
+                            <constraint firstItem="y23-Z3-VBb" firstAttribute="top" secondItem="BBy-wB-CQb" secondAttribute="top" id="vz3-qd-Fre"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="y23-Z3-VBb" id="z5P-Yg-nC8"/>
+                        <outlet property="twerkCount" destination="y5d-Zm-54y" id="MGV-gY-P7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgN-YH-dk0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="203"/>
         </scene>
     </scenes>
 </document>
