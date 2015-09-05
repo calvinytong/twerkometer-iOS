@@ -7,17 +7,29 @@
 		<key>Pods-Twerk-and-Teach-iOS-CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< Updated upstream
 			<integer>2</integer>
+=======
+			<integer>1</integer>
+>>>>>>> Stashed changes
 		</dict>
 		<key>Pods-Twerk-and-Teach-iOS-PubNub.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< Updated upstream
 			<integer>3</integer>
+=======
+			<integer>2</integer>
+>>>>>>> Stashed changes
 		</dict>
 		<key>Pods-Twerk-and-Teach-iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< Updated upstream
 			<integer>1</integer>
+=======
+			<integer>0</integer>
+>>>>>>> Stashed changes
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
