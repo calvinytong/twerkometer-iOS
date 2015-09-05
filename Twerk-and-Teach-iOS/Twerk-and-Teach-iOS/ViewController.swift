@@ -15,6 +15,7 @@ class ViewController: UIViewController, PaerUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "channelcreated:", name: "channelcreated", object: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,6 +30,21 @@ class ViewController: UIViewController, PaerUIDelegate {
         var paer = PaerManager(dictToSend: ["stuff": "things"])
         paer.delegate = self
         paer.start()
+    }
+    
+    func channelcreated(notification: NSNotification)
+    {
+        performSegueWithIdentifier("SegueToDataSend", sender: notification.object)
+        NSNotificationCenter.defaultCenter().removeObserver(notification)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueToDataSend"
+        {
+            var dvc = segue.destinationViewController as! DataSendTest
+            dvc.stream = sender as! PaerStream
+            
+        }
     }
     
     func paerStarted() {

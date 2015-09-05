@@ -11,9 +11,6 @@ import CoreMotion
 class twerkClass {
     
     //Instance Variables
-    var currentMaxAccelX: Double = 0.0
-    var currentMaxAccelY: Double = 0.0
-    var currentMaxAccelZ: Double = 0.0
     var shakeCount: Int = 0
     
     var timeRemaining: Int = 10
@@ -30,6 +27,7 @@ class twerkClass {
         
         if (sqrt(x*x + y*y + z*z) > 1.5) {
             shakeCount++
+            NSNotificationCenter.defaultCenter().postNotificationName("pOneIncrement", object: shakeCount)
         }
         if (stop) {
             twerkMotionManager.stopAccelerometerUpdates()

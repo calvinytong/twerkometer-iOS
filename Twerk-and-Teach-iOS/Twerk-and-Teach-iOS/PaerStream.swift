@@ -22,8 +22,13 @@ class PaerStream: NSObject, PNObjectEventListener
     var joinedChannel : Bool = false
     var channelName : String = ""
     var twousersinchannel : Bool = false
-    
+    var uuid : String!
     var dataToSend : [String: AnyObject] = Dictionary<String, AnyObject>()
+    
+
+    
+    var pOne : player = player()
+    var pTwo : player = player()
     
     var delegate : PaerStreamDelegate!
     
@@ -38,19 +43,35 @@ class PaerStream: NSObject, PNObjectEventListener
         self.localMinor = localMinor
         self.foreignMajor = foreignMajor
         self.foreignMinor = foreignMinor
+        self.uuid = UIDevice.currentDevice().identifierForVendor.UUIDString
         
         formChannelName()
         
         client.subscribeToChannels([channelName], withPresence: true)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "pOneIncrement:", name: "pOneIncrement", object: nil)
     }
     
     /**Send data over channel.*/
     func sendData(dataToSend :  Dictionary<String, AnyObject>)
     {
         self.dataToSend = dataToSend
-        var uuidstring = UIDevice.currentDevice().identifierForVendor.UUIDString
-        self.dataToSend["uuid"] = uuidstring
-        client.publish(dataToSend, toChannel: channelName, compressed: false, withCompletion: {
+        self.dataToSend["uuid"] = self.uuid
+        
+        if dataToSend["type"] as! String == "start"
+        {
+            self.pOne.ready = 1
+        }
+        else if dataToSend["type"] as! String == "finish"
+        {
+            pOne.finished = 1
+        }
+        
+        if self.pOne.ready + self.pTwo.ready == 2
+        {
+            NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
+        }
+        
+        client.publish(self.dataToSend, toChannel: channelName, compressed: false, withCompletion: {
             (status: PNPublishStatus!) -> Void in
             
             if !status.error
@@ -64,14 +85,50 @@ class PaerStream: NSObject, PNObjectEventListener
         })
     }
     
+    
     /**Handle receiving messages over the channel. We filter only for messages not sent by us.*/
     func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
         
             // Ensure we're on the correct channel
         if message.data.subscribedChannel == channelName
         {
-            let messageData : AnyObject = message.data.message
+            let messageData = message.data.message as! Dictionary<String, AnyObject>
             println("Received message: \(messageData)")
+            
+            //message came from other
+            if messageData["uuid"] as? String != self.uuid
+            {
+                var pTwoScore : Int!
+                switch(messageData["type"] as! String)
+                {
+                    case "start":
+                        pTwo.ready = 1
+                        if pOne.ready + pTwo.ready == 2
+                        {
+                            NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
+                        }
+                        return
+                    case "incrementPTwo":
+                        pTwo.score++
+                        return
+                    case "finish":
+                        pTwo.score = messageData["score"] as! Int
+                        pTwo.finished = 1
+                        if pOne.finished + pTwo.finished == 2
+                        {
+                            
+                            NSNotificationCenter.defaultCenter().postNotificationName("finished", object: [pOne.score, pTwo.score])
+                        }
+                        return
+                    
+                    default:
+                        return
+                }
+            }
+            else
+            {
+                return
+            }
             
             //do what we want with messageData
             
@@ -164,5 +221,8 @@ class PaerStream: NSObject, PNObjectEventListener
         println("Channel name: \(channelName)")
     }
     
-
+    func pOneIncrement(notification: NSNotification)
+    {
+        pOne.score = notification.object as! Int
+    }
 }
