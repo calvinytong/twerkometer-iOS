@@ -42,6 +42,7 @@
 		414F6F191B9B7951008A9E7F /* White Circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F181B9B7951008A9E7F /* White Circle.png */; };
 		4169007B1B9B895B00282E0B /* playerstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007A1B9B895B00282E0B /* playerstruct.swift */; };
 		4169007F1B9B899700282E0B /* DataSendTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007E1B9B899700282E0B /* DataSendTest.swift */; };
+		416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 416900801B9B8C3B00282E0B /* twerk for tech.png */; };
 		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		414F6F181B9B7951008A9E7F /* White Circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White Circle.png"; sourceTree = "<group>"; };
 		4169007A1B9B895B00282E0B /* playerstruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerstruct.swift; sourceTree = "<group>"; };
 		4169007E1B9B899700282E0B /* DataSendTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendTest.swift; sourceTree = "<group>"; };
+		416900801B9B8C3B00282E0B /* twerk for tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twerk for tech.png"; sourceTree = "<group>"; };
 		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */,
 				4169007A1B9B895B00282E0B /* playerstruct.swift */,
 				3E0221EE1B9ADCC4008CD051 /* Main.storyboard */,
+				416900801B9B8C3B00282E0B /* twerk for tech.png */,
 				3E0221F11B9ADCC4008CD051 /* Images.xcassets */,
 				414F6F181B9B7951008A9E7F /* White Circle.png */,
 				414F6F141B9B7666008A9E7F /* for tech.png */,
@@ -335,6 +338,7 @@
 				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
 				414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */,
 				414F6F191B9B7951008A9E7F /* White Circle.png in Resources */,
+				416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */,
 				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
 				414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */,
 			);
