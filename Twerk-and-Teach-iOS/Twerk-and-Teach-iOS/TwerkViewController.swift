@@ -9,6 +9,7 @@
 import UIKit
 import CoreMotion
 import AudioToolbox
+import AVFoundation
 
 class TwerkViewController: UIViewController {
     
@@ -16,6 +17,9 @@ class TwerkViewController: UIViewController {
     
     @IBOutlet var timeRemainingLabel: UILabel!
     
+    var songs = ["water", "barbra", "pbj", "saxobeat", "sandstorm", "Starships", "mambo",]
+    var songindex : Int!
+    var audioPlayer : AVAudioPlayer!
     
     @IBOutlet var twerkCount: UILabel!
     
@@ -27,6 +31,10 @@ class TwerkViewController: UIViewController {
 
     
     override func viewDidLoad() {
+        srand(5000)
+        var temp = rand() % 7
+        songindex = Int(temp)
+        
         twerkInstance = twerkClass(stream: stream)
         
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
@@ -42,6 +50,18 @@ class TwerkViewController: UIViewController {
                     println("\(error)")
                 }
             })
+            
+            var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(songs[songindex], ofType: "wav")!)
+            println(alertSound)
+            
+            // Removed deprecated use of AVAudioSessionDelegate protocol
+            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+            AVAudioSession.sharedInstance().setActive(true, error: nil)
+            
+            var error : NSError?
+            audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
             
             twerkInstance.timer = NSTimer(timeInterval: 1.0, target: self, selector: "countDown", userInfo: nil, repeats: true)
             NSRunLoop.currentRunLoop().addTimer(twerkInstance.timer, forMode: NSRunLoopCommonModes)
