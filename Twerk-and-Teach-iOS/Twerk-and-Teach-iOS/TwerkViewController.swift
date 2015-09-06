@@ -11,28 +11,26 @@ import CoreMotion
 
 class TwerkViewController: UIViewController {
     
+    var stream : PaerStream!
+    
     @IBOutlet var timeRemainingLabel: UILabel!
     
     
     @IBOutlet var twerkCount: UILabel!
     
-    var twerkInstance = twerkClass()
+    var twerkInstance : twerkClass!
     
     override func shouldAutorotate() -> Bool {
         return false
     }
     
     override func viewDidLoad() {
+        twerkInstance = twerkClass(stream: stream)
+        
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
         twerkInstance.twerkMotionManager.accelerometerUpdateInterval = 0.2
         
         
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    
-    
-    @IBAction func start(sender: AnyObject) {
         if (twerkInstance.timeRemaining > 0) {
             twerkInstance.twerkMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) -> Void in
                 self.twerkInstance.outputAccelerationData(accelerometerData.acceleration)
@@ -45,14 +43,23 @@ class TwerkViewController: UIViewController {
             twerkInstance.timer = NSTimer(timeInterval: 1.0, target: self, selector: "countDown", userInfo: nil, repeats: true)
             NSRunLoop.currentRunLoop().addTimer(twerkInstance.timer, forMode: NSRunLoopCommonModes)
         }
+        
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func countDown() {
         twerkInstance.timeRemaining--
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
-        if (twerkInstance.timeRemaining == 0) {
+        if (twerkInstance.timeRemaining == 0 && stream.pOne.finished + stream.pTwo.finished == 2) {
             twerkInstance.timer.invalidate()
             twerkInstance.stop = true
+            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
+            if stream.pOne.score >= stream.pTwo.score {
+                performSegueWithIdentifier("SegueToWonViewController", sender: nil)
+            }
+            else {
+                performSegueWithIdentifier("SegueToLostViewController", sender: nil)
+            }
         }
     }
     

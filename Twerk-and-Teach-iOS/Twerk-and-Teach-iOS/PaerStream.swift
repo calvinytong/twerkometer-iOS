@@ -72,7 +72,7 @@ class PaerStream: NSObject, PNObjectEventListener
         
         if self.pOne.ready + self.pTwo.ready == 2
         {
-            NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
         }
         
         client.publish(self.dataToSend, toChannel: channelName, compressed: false, withCompletion: {

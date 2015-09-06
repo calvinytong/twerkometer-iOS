@@ -18,7 +18,11 @@ class twerkClass {
     
     var stop = false
     var twerkMotionManager = CMMotionManager()
+    var datastream : PaerStream!
     
+    init(stream : PaerStream) {
+        datastream = stream
+    }
     
     func outputAccelerationData(acceleration: CMAcceleration) {
         var x = acceleration.x
@@ -27,6 +31,7 @@ class twerkClass {
         
         if (sqrt(x*x + y*y + z*z) > 1.5) {
             shakeCount++
+            datastream.sendData(["type": "incrementPTwo"])
             NSNotificationCenter.defaultCenter().postNotificationName("pOneIncrement", object: shakeCount)
         }
         if (stop) {
