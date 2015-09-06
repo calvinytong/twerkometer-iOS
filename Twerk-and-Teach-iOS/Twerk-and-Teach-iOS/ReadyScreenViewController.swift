@@ -40,7 +40,6 @@ class ReadyScreenViewController : UIViewController
         {
             var dvc = segue.destinationViewController as! TwerkViewController
             dvc.stream = stream
-            
         }
     }
 }

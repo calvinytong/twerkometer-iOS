@@ -38,7 +38,6 @@ class BetViewController : UIViewController
         {
             var dvc = segue.destinationViewController as! ReadyScreenViewController
             dvc.stream = sender as! PaerStream
-            
         }
     }
 
