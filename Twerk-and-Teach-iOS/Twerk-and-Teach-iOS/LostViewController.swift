@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class LostViewController : UIViewController {
     var pOneScore: Int!
@@ -15,13 +16,29 @@ class LostViewController : UIViewController {
     var stream : PaerStream!
     @IBOutlet var yourScore: UITextField!
     @IBOutlet var theirScore: UITextField!
+    var audioPlayer : AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("6", ofType: "wav")!)
+        println(alertSound)
+        
+        // Removed deprecated use of AVAudioSessionDelegate protocol
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
+        var error : NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
     }
     @IBAction func home(sender: AnyObject) {
         stream.zeroPlayers()
     }
+    
+    
 
 }

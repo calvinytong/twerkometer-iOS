@@ -14,24 +14,25 @@ class WonViewController: UIViewController {
     var pOneScore: Int!
     var pTwoScore: Int!
     var stream : PaerStream!
-//    var audioPlayer : AVAudioPlayer!
+    var audioPlayer : AVAudioPlayer!
+    
     @IBOutlet var yourScore: UITextField!
     @IBOutlet var theirScore: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("won", ofType: "m4a")!)
-//        println(alertSound)
-//        
-//        // Removed deprecated use of AVAudioSessionDelegate protocol
-//        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-//        AVAudioSession.sharedInstance().setActive(true, error: nil)
-//        
-//        var error : NSError?
-//        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-//        audioPlayer.prepareToPlay()
-//        audioPlayer.play()
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("5", ofType: "wav")!)
+        println(alertSound)
+        
+        // Removed deprecated use of AVAudioSessionDelegate protocol
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
+        var error : NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
         
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"

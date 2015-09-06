@@ -36,6 +36,7 @@
 		3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */; };
 		3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */; };
 		3E7F7AAE1B9BE78900B7B53F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */; };
+		3E7F7AB61B9C021100B7B53F /* 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F7AB51B9C021100B7B53F /* 5.wav */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
@@ -44,6 +45,7 @@
 		3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */; };
 		3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */; };
 		3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1891B9B111500D6AC86 /* ParseManager.swift */; };
+		3EFF623A1B9C035F00FBB566 /* 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF62391B9C035F00FBB566 /* 6.wav */; };
 		414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */; };
 		414F6F151B9B7666008A9E7F /* for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F141B9B7666008A9E7F /* for tech.png */; };
 		414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F161B9B7713008A9E7F /* for tech italicized.png */; };
@@ -100,12 +102,7 @@
 		3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
 		3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
 		3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3E7F7AAF1B9BE7EB00B7B53F /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.m4a; sourceTree = "<group>"; };
-		3E7F7AB01B9BE7EB00B7B53F /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.m4a; sourceTree = "<group>"; };
-		3E7F7AB11B9BE7EB00B7B53F /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.m4a; sourceTree = "<group>"; };
-		3E7F7AB21B9BE7EB00B7B53F /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.m4a; sourceTree = "<group>"; };
-		3E7F7AB31B9BE7EB00B7B53F /* won.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = won.m4a; sourceTree = "<group>"; };
-		3E7F7AB41B9BE7EB00B7B53F /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.m4a; sourceTree = "<group>"; };
+		3E7F7AB51B9C021100B7B53F /* 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5.wav; sourceTree = "<group>"; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
@@ -115,6 +112,7 @@
 		3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twerk-and-Teach-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EA1C1871B9B0F0900D6AC86 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		3EA1C1891B9B111500D6AC86 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
+		3EFF62391B9C035F00FBB566 /* 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6.wav; sourceTree = "<group>"; };
 		414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Nessie-iOS-Wrapper"; path = "../../Nessie-iOS-Wrapper"; sourceTree = "<group>"; };
 		414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -224,12 +222,8 @@
 				414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */,
 				414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */,
 				414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */,
-				3E7F7AAF1B9BE7EB00B7B53F /* 1.m4a */,
-				3E7F7AB01B9BE7EB00B7B53F /* 2.m4a */,
-				3E7F7AB11B9BE7EB00B7B53F /* 3.m4a */,
-				3E7F7AB21B9BE7EB00B7B53F /* 4.m4a */,
-				3E7F7AB31B9BE7EB00B7B53F /* won.m4a */,
-				3E7F7AB41B9BE7EB00B7B53F /* 6.m4a */,
+				3E7F7AB51B9C021100B7B53F /* 5.wav */,
+				3EFF62391B9C035F00FBB566 /* 6.wav */,
 				414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */,
 				3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
@@ -370,10 +364,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7F7AB61B9C021100B7B53F /* 5.wav in Resources */,
 				414F6F151B9B7666008A9E7F /* for tech.png in Resources */,
 				3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */,
 				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
 				414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */,
+				3EFF623A1B9C035F00FBB566 /* 6.wav in Resources */,
 				414F6F191B9B7951008A9E7F /* White Circle.png in Resources */,
 				416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */,
 				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
