@@ -79,9 +79,5 @@ class LostViewController : UIViewController {
         stream.zeroPlayers()
     }
     
-<<<<<<< HEAD
-    
 
-=======
->>>>>>> 3b22aed6f86ab38f689449b9546b5061cc38fab3
 }
