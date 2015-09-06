@@ -110,11 +110,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last, First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJJ-uX-NSv">
-                                <rect key="frame" x="16" y="101" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-oI-ifq">
                                 <rect key="frame" x="16" y="139" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -142,6 +137,11 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XX8-Lh-SF2">
                                 <rect key="frame" x="16" y="329" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last, First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJJ-uX-NSv">
+                                <rect key="frame" x="16" y="101" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -177,6 +177,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="address" destination="XX8-Lh-SF2" id="J5K-QZ-ldd"/>
+                        <outlet property="ccn" destination="tEo-W0-iRz" id="Gey-Zd-NTr"/>
+                        <outlet property="expdate" destination="0L1-0O-fg5" id="8Ct-N9-Lif"/>
+                        <outlet property="lastfirstname" destination="XJJ-uX-NSv" id="7yT-dw-LPg"/>
+                        <outlet property="password" destination="CIR-bm-3Mu" id="tt8-9v-lxw"/>
+                        <outlet property="securitycode" destination="sam-QG-LUq" id="dex-bK-tRs"/>
+                        <outlet property="username" destination="gz5-oI-ifq" id="stt-5x-HnD"/>
                         <segue destination="87w-lQ-clQ" kind="show" identifier="SegueFromRegisterToChallenge" id="OmD-Jo-ii8"/>
                     </connections>
                 </viewController>
