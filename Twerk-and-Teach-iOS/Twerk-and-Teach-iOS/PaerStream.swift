@@ -113,7 +113,8 @@ class PaerStream: NSObject, PNObjectEventListener
                 {
                     case "identify":
                         pTwo.username = messageData["username"] as! String
-                        NSNotificationCenter.defaultCenter().postNotificationName("setusername", object: nil)
+                        println("name received")
+                        NSNotificationCenter.defaultCenter().postNotificationName("setusername", object: pTwo.username)
                         return
                     case "start":
                         pTwo.ready = 1

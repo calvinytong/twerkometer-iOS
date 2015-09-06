@@ -12,7 +12,6 @@ import UIKit
 class PlayerFoundViewController : UIViewController
 {
     var stream : PaerStream!
-    var username : String!
     
     @IBOutlet weak var ptwolabel: UILabel!
     @IBOutlet weak var playbutton: UIButton!
@@ -20,7 +19,8 @@ class PlayerFoundViewController : UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setusername:", name: "setusername", object: nil)
-        stream.sendData(["type": "identity", "username": stream.pOne.username])
+        stream.sendData(["type": "identify", "username": stream.pOne.username])
+        ptwolabel.text = ""
         //todo query for the username and change the label
     }
     
@@ -45,6 +45,6 @@ class PlayerFoundViewController : UIViewController
     }
     
     func setusername(notification: NSNotification) {
-        ptwolabel?.text = stream.pTwo.username
+        ptwolabel.text = notification.object as? String
     }
 }
