@@ -54,6 +54,8 @@
 		416BFC921B9C02A0002EC498 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC911B9C02A0002EC498 /* Customer.swift */; };
 		416BFC941B9C02AA002EC498 /* NSEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC931B9C02AA002EC498 /* NSEClient.swift */; };
 		416BFC961B9C02B9002EC498 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC951B9C02B9002EC498 /* Address.swift */; };
+		416BFC981B9C04AC002EC498 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC971B9C04AC002EC498 /* Transfer.swift */; };
+		416BFC9A1B9C0531002EC498 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC991B9C0531002EC498 /* Transaction.swift */; };
 		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,8 @@
 		416BFC911B9C02A0002EC498 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		416BFC931B9C02AA002EC498 /* NSEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEClient.swift; sourceTree = "<group>"; };
 		416BFC951B9C02B9002EC498 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		416BFC971B9C04AC002EC498 /* Transfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
+		416BFC991B9C0531002EC498 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +245,8 @@
 				416BFC911B9C02A0002EC498 /* Customer.swift */,
 				416BFC931B9C02AA002EC498 /* NSEClient.swift */,
 				416BFC951B9C02B9002EC498 /* Address.swift */,
+				416BFC971B9C04AC002EC498 /* Transfer.swift */,
+				416BFC991B9C0531002EC498 /* Transaction.swift */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
 				3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */,
 			);
@@ -466,6 +472,7 @@
 				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
+				416BFC9A1B9C0531002EC498 /* Transaction.swift in Sources */,
 				3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */,
 				3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */,
 				416BFC961B9C02B9002EC498 /* Address.swift in Sources */,
@@ -474,6 +481,7 @@
 				3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */,
 				3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */,
 				3EA1C1831B9ADE7200D6AC86 /* PaerManager.swift in Sources */,
+				416BFC981B9C04AC002EC498 /* Transfer.swift in Sources */,
 				4169007B1B9B895B00282E0B /* playerstruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

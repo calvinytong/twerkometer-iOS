@@ -96,7 +96,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
             }
             if foundComma {
                 index++
-                if index > 1 {
+                if index > 2 {
                     firstName += "\(character)"
                 }
             }

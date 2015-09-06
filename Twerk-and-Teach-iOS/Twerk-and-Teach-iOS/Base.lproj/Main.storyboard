@@ -896,7 +896,7 @@
                     </view>
                     <connections>
                         <outlet property="theirScore" destination="2DQ-a3-VSC" id="oIr-PP-Dgf"/>
-                        <outlet property="yourScore" destination="Fvm-4P-KV1" id="Zfs-nO-CFC"/>
+                        <outlet property="yourScore" destination="Fvm-4P-KV1" id="E1U-vP-QfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5O5-6h-0Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -909,6 +909,6 @@
         <image name="twerk for tech.png" width="456" height="82"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OmD-Jo-ii8"/>
+        <segue reference="mYz-Ek-lcI"/>
     </inferredMetricsTieBreakers>
 </document>
