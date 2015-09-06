@@ -15,7 +15,7 @@ class LostViewController : UIViewController {
     let client = NSEClient.sharedInstance
     var stream : PaerStream!
     
-    func postTransfer(amount: Double, description: String, accountId: String, payeeId: String) {
+    func postTransfer(amount: Double, description: String, accountId: String) {
         client.setKey("a4063d9a0849a4e4dbe689e8854443a1")
         TransferRequest(block: {(builder:TransferRequestBuilder) in
             builder.requestType = HTTPType.POST
@@ -23,7 +23,7 @@ class LostViewController : UIViewController {
             builder.transferMedium = TransactionMedium.BALANCE
             builder.description = description
             builder.accountId = accountId
-            builder.payeeId = "55e94a1af8d877051ab4f6c1"
+            builder.payeeId = "55ebc66bf94da70f0038e5c1"
             
         })?.send(completion: {(result) in
             TransferRequest(block: {(builder:TransferRequestBuilder) in
@@ -53,7 +53,7 @@ class LostViewController : UIViewController {
         super.viewDidLoad()
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
-        postTransfer(0.25, description: "for charity", accountId: "0", payeeId: "0")
+        postTransfer(0.25, description: "for charity", accountId: "0")
     }
     @IBAction func home(sender: AnyObject) {
         stream.zeroPlayers()
