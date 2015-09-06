@@ -16,17 +16,27 @@ class PlayerFoundViewController : UIViewController
     @IBOutlet weak var ptwolabel: UILabel!
     @IBOutlet weak var playbutton: UIButton!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setusername:", name: "setusername", object: nil)
-        stream.sendData(["type": "identify", "username": stream.pOne.username])
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "join:", name: "join", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "messagereceived:", name: "messagereceived", object: nil)
         ptwolabel.text = ""
-        //todo query for the username and change the label
-    }
+        
+        if(ptwolabel.text == "")
+        {
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+        }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-
+        
+        //todo query for the username and change the label
     }
     
     
@@ -46,5 +56,28 @@ class PlayerFoundViewController : UIViewController
     
     func setusername(notification: NSNotification) {
         ptwolabel.text = notification.object as? String
+        NSNotificationCenter.defaultCenter().removeObserver(notification)
+    }
+    
+    func join(notification: NSNotification)
+    {
+        if(ptwolabel.text == "")
+        {
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+        }
+    }
+    
+    func messagereceived(notification : NSNotification)
+    {
+        if(ptwolabel.text == "")
+        {
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+            stream.sendData(["type": "identify", "username": stream.pOne.username])
+        }
     }
 }

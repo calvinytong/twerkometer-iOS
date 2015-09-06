@@ -35,6 +35,7 @@
 		3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */; };
 		3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */; };
 		3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */; };
+		3E7F7AAE1B9BE78900B7B53F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
@@ -98,6 +99,13 @@
 		3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
 		3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
 		3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
+		3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3E7F7AAF1B9BE7EB00B7B53F /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.m4a; sourceTree = "<group>"; };
+		3E7F7AB01B9BE7EB00B7B53F /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.m4a; sourceTree = "<group>"; };
+		3E7F7AB11B9BE7EB00B7B53F /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.m4a; sourceTree = "<group>"; };
+		3E7F7AB21B9BE7EB00B7B53F /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.m4a; sourceTree = "<group>"; };
+		3E7F7AB31B9BE7EB00B7B53F /* won.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = won.m4a; sourceTree = "<group>"; };
+		3E7F7AB41B9BE7EB00B7B53F /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.m4a; sourceTree = "<group>"; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7F7AAE1B9BE78900B7B53F /* AVFoundation.framework in Frameworks */,
 				3E0222251B9ADD73008CD051 /* AudioToolbox.framework in Frameworks */,
 				3E0222231B9ADD6E008CD051 /* CFNetwork.framework in Frameworks */,
 				3E0222211B9ADD69008CD051 /* CoreGraphics.framework in Frameworks */,
@@ -215,6 +224,12 @@
 				414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */,
 				414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */,
 				414F6F121B9B6BF0008A9E7F /* LobsterTwo-Italic.ttf */,
+				3E7F7AAF1B9BE7EB00B7B53F /* 1.m4a */,
+				3E7F7AB01B9BE7EB00B7B53F /* 2.m4a */,
+				3E7F7AB11B9BE7EB00B7B53F /* 3.m4a */,
+				3E7F7AB21B9BE7EB00B7B53F /* 4.m4a */,
+				3E7F7AB31B9BE7EB00B7B53F /* won.m4a */,
+				3E7F7AB41B9BE7EB00B7B53F /* 6.m4a */,
 				414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */,
 				3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
@@ -266,6 +281,7 @@
 		648C491DBB15D0772D7EB34E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */,
 				174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */,
 			);
 			name = Frameworks;

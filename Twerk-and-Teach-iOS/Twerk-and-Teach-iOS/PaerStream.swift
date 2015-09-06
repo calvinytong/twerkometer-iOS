@@ -104,6 +104,7 @@ class PaerStream: NSObject, PNObjectEventListener
     
     /**Handle receiving messages over the channel. We filter only for messages not sent by us.*/
     func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
+        NSNotificationCenter.defaultCenter().postNotificationName("messagereceived", object: nil)
         
             // Ensure we're on the correct channel
         if message.data.subscribedChannel == channelName
@@ -162,6 +163,7 @@ class PaerStream: NSObject, PNObjectEventListener
             println("Received presence event on transmit channel: \(event.data.presenceEvent)")
             if event.data.presenceEvent == "join"
             {
+                NSNotificationCenter.defaultCenter().postNotificationName("join", object: nil)
                 // Check the users on the channel
                 client.hereNowForChannel(channelName, withCompletion: {
                     (result: PNPresenceChannelHereNowResult!, error: PNErrorStatus!) -> Void in
