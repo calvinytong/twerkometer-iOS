@@ -11,12 +11,16 @@ import UIKit
 
 class RegisterViewController : UIViewController, UITextFieldDelegate
 {
-
+    let client = NSEClient.sharedInstance
+    
+    
+    @IBOutlet weak var lastfirstname: UITextField!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var ccn: UITextField!
     @IBOutlet weak var securitycode: UITextField!
     @IBOutlet weak var expdate: UITextField!
+    @IBOutlet weak var address: UITextField!
     
     var helper = LoginHelper()
     
@@ -37,6 +41,18 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
         expdate.delegate = self
     }
     
+    func postCustomer(firstName: String, lastName: String, address: Address) {
+        client.setKey("a4063d9a0849a4e4dbe689e8854443a1")
+        CustomerRequest(block: {(builder:CustomerRequestBuilder) in
+            builder.requestType = HTTPType.POST
+            builder.firstName = firstName
+            builder.lastName = lastName
+            builder.address = address
+        })?.send({(result) in
+            //no result
+        })
+    }
+    
     //to-do filter for correct input and account correction
     @IBAction func createUser(sender: AnyObject)
     {
@@ -54,6 +70,38 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
                 self.presentViewController(alert, animated: true) { () -> Void in }
             }
         })
+        postCustomer(firstName(lastfirstname.text), lastName: lastName(lastfirstname.text), address: Address(streetName: "streetname", streetNumber: "123", city: "city", state: "DC", zipCode: "12345"))
+    }
+    
+    func lastName(lastfirstname: String)-> String {
+        var lastName = ""
+        for character in lastfirstname {
+            if "\(character)" != "," {
+                lastName += "\(character)"
+            }
+            else {
+                return lastName
+            }
+        }
+        return lastName
+    }
+    
+    func firstName(lastfirstname: String) -> String {
+        var firstName = ""
+        var foundComma = false
+        var index = 0
+        for character in lastfirstname {
+            if "\(character)" == "," {
+                foundComma = true
+            }
+            if foundComma {
+                index++
+                if index > 2 {
+                    firstName += "\(character)"
+                }
+            }
+        }
+        return firstName
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -80,7 +128,7 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
         }
         return true
     }
-
+    
     func closeKeyboard()
     {
         if(self.activetextfield != nil) {
