@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vl1-VN-1GB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -659,7 +659,7 @@
         <!--Winner-->
         <scene sceneID="Xf3-ft-fpO">
             <objects>
-                <viewController id="kdT-fO-wOs" userLabel="Winner" sceneMemberID="viewController">
+                <viewController id="kdT-fO-wOs" userLabel="Winner" customClass="WonViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f5T-Op-MUy"/>
                         <viewControllerLayoutGuide type="bottom" id="ty0-E8-G7e"/>
@@ -668,15 +668,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-V9-h0r">
-                                <rect key="frame" x="16" y="28" width="568" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="KkT-yA-XAd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="70"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llA-5r-BEh">
                                 <rect key="frame" x="16" y="113" width="568" height="96"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="70"/>
@@ -734,6 +725,15 @@
                                     <segue destination="87w-lQ-clQ" kind="show" id="AZ2-XW-KjB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-V9-h0r">
+                                <rect key="frame" x="16" y="28" width="568" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="KkT-yA-XAd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -760,6 +760,10 @@
                             <constraint firstItem="ty0-E8-G7e" firstAttribute="top" secondItem="OdM-Jh-MLF" secondAttribute="bottom" constant="8" symbolic="YES" id="rPh-MV-cvr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="theirScore" destination="Rd7-1q-r1r" id="y8g-jF-hba"/>
+                        <outlet property="yourScore" destination="i4F-T4-ZzC" id="daA-qb-g2G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtu-ee-hvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -768,7 +772,7 @@
         <!--Loser-->
         <scene sceneID="vMc-pJ-KRC">
             <objects>
-                <viewController id="dyb-tc-tfc" userLabel="Loser" sceneMemberID="viewController">
+                <viewController id="dyb-tc-tfc" userLabel="Loser" customClass="LostViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xOJ-ZP-FCX"/>
                         <viewControllerLayoutGuide type="bottom" id="AV9-TI-K67"/>
@@ -870,6 +874,10 @@
                             <constraint firstItem="AV9-TI-K67" firstAttribute="top" secondItem="DT4-8x-RiW" secondAttribute="bottom" constant="8" symbolic="YES" id="yjL-bk-gbc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="theirScore" destination="2DQ-a3-VSC" id="oIr-PP-Dgf"/>
+                        <outlet property="yourScore" destination="Fvm-4P-KV1" id="Zfs-nO-CFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5O5-6h-0Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -881,6 +889,6 @@
         <image name="twerk for tech.png" width="456" height="82"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mYz-Ek-lcI"/>
+        <segue reference="AZ2-XW-KjB"/>
     </inferredMetricsTieBreakers>
 </document>

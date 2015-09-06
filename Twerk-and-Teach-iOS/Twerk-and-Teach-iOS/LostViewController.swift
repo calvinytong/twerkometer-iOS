@@ -10,7 +10,14 @@ import Foundation
 import UIKit
 
 class LostViewController : UIViewController {
+    var pOneScore: Int!
+    var pTwoScore: Int!
+    @IBOutlet var yourScore: UITextField!
+    @IBOutlet var theirScore: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        yourScore?.text = "\(pOneScore)"
+        theirScore?.text = "\(pTwoScore)"
     }
+
 }

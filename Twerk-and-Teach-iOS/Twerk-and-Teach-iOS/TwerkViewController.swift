@@ -68,6 +68,19 @@ class TwerkViewController: UIViewController {
 
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueToLostViewController" {
+            var dvc = segue.destinationViewController as! LostViewController
+            dvc.pOneScore = stream.pOne.score
+            dvc.pTwoScore = stream.pTwo.score
+        }
+        if segue.identifier == "SegueToWonViewController" {
+            var dvc = segue.destinationViewController as! WonViewController
+            dvc.pOneScore = stream.pOne.score
+            dvc.pTwoScore = stream.pTwo.score
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
