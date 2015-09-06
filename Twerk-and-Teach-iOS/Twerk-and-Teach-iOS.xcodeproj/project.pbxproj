@@ -48,6 +48,7 @@
 		3EFF623A1B9C035F00FBB566 /* 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF62391B9C035F00FBB566 /* 6.wav */; };
 		3EFF623C1B9C21FD00FBB566 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF623B1B9C21FD00FBB566 /* DonationViewController.swift */; };
 		4120B3BF1B9C2D7000600900 /* TotalAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */; };
+		4120B3C11B9C359C00600900 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4120B3C01B9C359C00600900 /* MainScreenViewController.swift */; };
 		414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */; };
 		414F6F151B9B7666008A9E7F /* for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F141B9B7666008A9E7F /* for tech.png */; };
 		414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F161B9B7713008A9E7F /* for tech italicized.png */; };
@@ -123,6 +124,7 @@
 		3EFF62391B9C035F00FBB566 /* 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6.wav; sourceTree = "<group>"; };
 		3EFF623B1B9C21FD00FBB566 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalAmountViewController.swift; sourceTree = "<group>"; };
+		4120B3C01B9C359C00600900 /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Nessie-iOS-Wrapper"; path = "../../Nessie-iOS-Wrapper"; sourceTree = "<group>"; };
 		414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */,
 				3E7CC1891B9B8DF1002AF667 /* RegisterViewController.swift */,
 				4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */,
+				4120B3C01B9C359C00600900 /* MainScreenViewController.swift */,
 				3E7CC18B1B9B91EC002AF667 /* LoginViewController.swift */,
 				3E7CC18D1B9B9641002AF667 /* ChallengeViewController.swift */,
 				3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */,
@@ -484,6 +487,7 @@
 				3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */,
 				3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */,
 				416BFC961B9C02B9002EC498 /* Address.swift in Sources */,
+				4120B3C11B9C359C00600900 /* MainScreenViewController.swift in Sources */,
 				416BFC921B9C02A0002EC498 /* Customer.swift in Sources */,
 				3E7CC18A1B9B8DF1002AF667 /* RegisterViewController.swift in Sources */,
 				3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */,

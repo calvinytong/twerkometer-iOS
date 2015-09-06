@@ -43,5 +43,9 @@ class WonViewController: UIViewController {
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
     }
-
+    
+    @IBAction func home(sender: AnyObject) {
+        stream.zeroPlayers()
+    }
+    
 }

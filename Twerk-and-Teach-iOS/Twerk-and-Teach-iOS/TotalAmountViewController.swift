@@ -12,14 +12,23 @@ import UIKit
 class TotalAmountViewController: UIViewController {
     
     var stream : PaerStream!
+    var donator : String!
+    var donation : Double!
     
     @IBOutlet weak var username: UILabel!
     
     @IBOutlet weak var donatedAmount: UITextField!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        username?.text = donator
+        donatedAmount?.text = "\(donation)"
     }
     @IBAction func home(sender: AnyObject) {
         stream.zeroPlayers()

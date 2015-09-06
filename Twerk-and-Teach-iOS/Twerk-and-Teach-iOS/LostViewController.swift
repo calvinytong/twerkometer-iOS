@@ -15,6 +15,7 @@ class LostViewController : UIViewController {
     var pTwoScore: Int!
     let client = NSEClient.sharedInstance
     var stream : PaerStream!
+    var donation : Double!
     
     override func shouldAutorotate() -> Bool {
         
@@ -80,11 +81,21 @@ class LostViewController : UIViewController {
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
         postTransfer(0.25, description: "for charity", accountId: "0")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let name: AnyObject = defaults.valueForKey("bet")
+        {
+            donation = name as! Double
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueLostToTotal" {
+
             var dvc = segue.destinationViewController as! TotalAmountViewController
+            dvc.stream = stream
+            dvc.donator = stream.pOne.username
+            dvc.donation = donation
         }
     }
 
