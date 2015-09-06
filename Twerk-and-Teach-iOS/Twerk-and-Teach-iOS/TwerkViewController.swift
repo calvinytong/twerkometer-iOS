@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreMotion
+import AudioToolbox
 
 class TwerkViewController: UIViewController {
     
@@ -51,6 +52,10 @@ class TwerkViewController: UIViewController {
     func countDown() {
         twerkInstance.timeRemaining--
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
+        if stream.pOne.score > stream.pTwo.score
+        {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
         if (twerkInstance.timeRemaining == 0) {
             stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
             twerkInstance.timer.invalidate()
