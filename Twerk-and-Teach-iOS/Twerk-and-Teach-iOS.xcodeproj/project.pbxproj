@@ -33,6 +33,8 @@
 		3E7CC1901B9B9900002AF667 /* PlayerFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */; };
 		3E7CC1921B9B99B7002AF667 /* BetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1911B9B99B7002AF667 /* BetViewController.swift */; };
 		3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */; };
+		3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */; };
+		3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
@@ -94,6 +96,8 @@
 		3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerFoundViewController.swift; sourceTree = "<group>"; };
 		3E7CC1911B9B99B7002AF667 /* BetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetViewController.swift; sourceTree = "<group>"; };
 		3E7CC1931B9BA235002AF667 /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
+		3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
+		3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				3EA1C17A1B9ADE7200D6AC86 /* PaerUIDelegate.swift */,
 				3EA1C17B1B9ADE7200D6AC86 /* PaerManager.swift */,
 				4169007A1B9B895B00282E0B /* playerstruct.swift */,
+				3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */,
+				3E7F7AA91B9BCB9800B7B53F /* LostViewController.swift */,
 				3E0221EE1B9ADCC4008CD051 /* Main.storyboard */,
 				416900801B9B8C3B00282E0B /* twerk for tech.png */,
 				3E0221F11B9ADCC4008CD051 /* Images.xcassets */,
@@ -430,9 +436,11 @@
 				3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */,
 				3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */,
 				3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */,
+				3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */,
 				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
+				3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */,
 				3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */,
 				3E7CC18A1B9B8DF1002AF667 /* RegisterViewController.swift in Sources */,
 				3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */,
