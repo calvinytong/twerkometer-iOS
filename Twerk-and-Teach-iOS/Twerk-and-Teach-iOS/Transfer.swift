@@ -13,7 +13,7 @@ public class TransferRequestBuilder {
     public var payeeId: String!
     
     public var transferMedium: TransactionMedium?
-    public var amount: Double?
+    public var amount: Int?
     public var transferId: String!
     public var description: String?
     public var transferDate: String!

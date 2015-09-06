@@ -13,7 +13,7 @@ class TotalAmountViewController: UIViewController {
     
     var stream : PaerStream!
     var donator : String!
-    var donation : Double!
+    var donation : Int!
     
     @IBOutlet weak var username: UILabel!
     

@@ -15,7 +15,7 @@ class LostViewController : UIViewController {
     var pTwoScore: Int!
     let client = NSEClient.sharedInstance
     var stream : PaerStream!
-    var donation : Double!
+    var donation : Int!
     
     override func shouldAutorotate() -> Bool {
         
@@ -23,7 +23,7 @@ class LostViewController : UIViewController {
         
     }
     
-    func postTransfer(amount: Double, description: String, accountId: String) {
+    func postTransfer(amount: Int, description: String, accountId: String) {
         client.setKey("a4063d9a0849a4e4dbe689e8854443a1")
         TransferRequest(block: {(builder:TransferRequestBuilder) in
             builder.requestType = HTTPType.POST
@@ -69,7 +69,7 @@ class LostViewController : UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let name: AnyObject = defaults.valueForKey("bet")
         {
-            donation = name as! Double
+            donation = name as! Int
         }
         var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("6", ofType: "wav")!)
         println(alertSound)

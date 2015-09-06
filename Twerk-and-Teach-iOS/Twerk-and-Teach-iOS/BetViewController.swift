@@ -20,7 +20,7 @@ class BetViewController : UIViewController
     }
     
     @IBOutlet weak var betselector: UISegmentedControl!
-    var segmentedControlArray: [Double] = [0.25, 0.5, 0.75, 1.00]
+    var segmentedControlArray: [Int] = [1, 2, 3, 5]
     @IBOutlet weak var confirmbutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
