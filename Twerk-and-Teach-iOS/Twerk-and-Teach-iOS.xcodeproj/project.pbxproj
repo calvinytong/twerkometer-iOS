@@ -51,6 +51,9 @@
 		4169007B1B9B895B00282E0B /* playerstruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007A1B9B895B00282E0B /* playerstruct.swift */; };
 		4169007F1B9B899700282E0B /* DataSendTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169007E1B9B899700282E0B /* DataSendTest.swift */; };
 		416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 416900801B9B8C3B00282E0B /* twerk for tech.png */; };
+		416BFC921B9C02A0002EC498 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC911B9C02A0002EC498 /* Customer.swift */; };
+		416BFC941B9C02AA002EC498 /* NSEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC931B9C02AA002EC498 /* NSEClient.swift */; };
+		416BFC961B9C02B9002EC498 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416BFC951B9C02B9002EC498 /* Address.swift */; };
 		9D8E70A2FE04568072249C88 /* Pods_Twerk_and_Teach_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174F80AE80C6C29B10BF011A /* Pods_Twerk_and_Teach_iOS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -126,6 +129,9 @@
 		4169007A1B9B895B00282E0B /* playerstruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerstruct.swift; sourceTree = "<group>"; };
 		4169007E1B9B899700282E0B /* DataSendTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSendTest.swift; sourceTree = "<group>"; };
 		416900801B9B8C3B00282E0B /* twerk for tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twerk for tech.png"; sourceTree = "<group>"; };
+		416BFC911B9C02A0002EC498 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		416BFC931B9C02AA002EC498 /* NSEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSEClient.swift; sourceTree = "<group>"; };
+		416BFC951B9C02B9002EC498 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		D3A95DE256747E477E5FBD94 /* Pods-Twerk-and-Teach-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twerk-and-Teach-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twerk-and-Teach-iOS/Pods-Twerk-and-Teach-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +238,9 @@
 				3E7F7AB41B9BE7EB00B7B53F /* 6.m4a */,
 				414F6F131B9B6BF0008A9E7F /* LobsterTwo-Regular.ttf */,
 				3E0221F31B9ADCC4008CD051 /* LaunchScreen.xib */,
+				416BFC911B9C02A0002EC498 /* Customer.swift */,
+				416BFC931B9C02AA002EC498 /* NSEClient.swift */,
+				416BFC951B9C02B9002EC498 /* Address.swift */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
 				3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */,
 			);
@@ -452,12 +461,15 @@
 				3EA1C1811B9ADE7200D6AC86 /* PaerStreamDelegate.swift in Sources */,
 				3EA1C1881B9B0F0900D6AC86 /* LoginHelper.swift in Sources */,
 				3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */,
+				416BFC941B9C02AA002EC498 /* NSEClient.swift in Sources */,
 				3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */,
 				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,
 				3E7F7AAA1B9BCB9800B7B53F /* LostViewController.swift in Sources */,
 				3E7CC18E1B9B9641002AF667 /* ChallengeViewController.swift in Sources */,
+				416BFC961B9C02B9002EC498 /* Address.swift in Sources */,
+				416BFC921B9C02A0002EC498 /* Customer.swift in Sources */,
 				3E7CC18A1B9B8DF1002AF667 /* RegisterViewController.swift in Sources */,
 				3E7CC1941B9BA235002AF667 /* ReadyScreenViewController.swift in Sources */,
 				3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */,
