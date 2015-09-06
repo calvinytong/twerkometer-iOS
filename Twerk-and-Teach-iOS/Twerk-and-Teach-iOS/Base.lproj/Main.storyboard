@@ -84,7 +84,6 @@
         <!--Register-->
         <scene sceneID="hMt-1R-Uab">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5XW-M9-DJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="EME-nb-CyJ" userLabel="Register" customClass="RegisterViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggJ-eq-QwE"/>
@@ -190,6 +189,7 @@
                         <segue destination="87w-lQ-clQ" kind="show" identifier="SegueFromRegisterToChallenge" id="OmD-Jo-ii8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5XW-M9-DJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="791" y="-436"/>
         </scene>

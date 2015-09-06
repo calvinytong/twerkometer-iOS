@@ -28,23 +28,28 @@ class LostViewController : UIViewController {
         })?.send(completion: {(result) in
             TransferRequest(block: {(builder:TransferRequestBuilder) in
                 builder.requestType = HTTPType.GET
-                builder.accountId = accountId
+                builder.accountId = "55e94a6bf8d8770528e614e5"
             })?.send(completion: {(result:TransferResult) in
-                var transfers = result.getAllTransfers()
-                
-                if transfers!.count > 0 {
-                    let transferToGet = transfers![transfers!.count-1]
-                    var transferToDelete:Transfer? = nil;
-                    for transfer in transfers! {
-                        if transfer.status == "pending" {
-                            transferToDelete = transfer
-                        }
-                    }
-                    
-                }
             })
             
         })
+    }
+    
+    func getRaspberryPiBalance() -> Int {
+        client.setKey("a4063d9a0849a4e4dbe689e8854443a1")
+        var account : Account!
+        var getOneRequest = AccountRequest(block: {(builder) in
+            builder.requestType = HTTPType.GET
+            builder.accountId = "55e94a6bf8d8770528e614e5"
+        })
+        
+        getOneRequest?.send({(result) in
+            account = result.getAccount()
+            print("Account fetched:\(account)\n")
+            println("\(account!.balance)")
+            
+        })
+        return account.balance
     }
     
     @IBOutlet var yourScore: UITextField!

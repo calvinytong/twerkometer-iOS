@@ -12,7 +12,7 @@ class twerkClass {
     
     //Instance Variables
     var shakeCount: Int = 0
-    
+    var twerkVectorArray: [Double] = []
     var timeRemaining: Int = 10
     var timer = NSTimer()
     
@@ -29,13 +29,20 @@ class twerkClass {
         var y = acceleration.y
         var z = acceleration.z
         
-        if (sqrt(x*x + y*y + z*z) > 1.5) {
+        var twerkVector = sqrt(x*x + y*y + z*z)
+        
+        
+        twerkVectorArray.append(twerkVector)
+        
+        
+        if (twerkVector > 1.5) {
             shakeCount++
             datastream.sendData(["type": "incrementPTwo"])
             NSNotificationCenter.defaultCenter().postNotificationName("pOneIncrement", object: shakeCount)
         }
         if (stop) {
             twerkMotionManager.stopAccelerometerUpdates()
+            
         }
     }
 }
