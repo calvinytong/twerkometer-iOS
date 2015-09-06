@@ -798,22 +798,6 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdM-Jh-MLF">
-                                <rect key="frame" x="240" y="519" width="120" height="73"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="SQi-C7-puU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
-                                <state key="normal" title="HOME">
-                                    <color key="titleColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="home:" destination="kdT-fO-wOs" eventType="touchUpInside" id="dzJ-Ur-R4R"/>
-                                    <segue destination="87w-lQ-clQ" kind="show" id="AZ2-XW-KjB"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rd7-1q-r1r">
                                 <rect key="frame" x="16" y="449" width="568" height="62"/>
                                 <constraints>
@@ -823,6 +807,20 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hja-to-IQK">
+                                <rect key="frame" x="255" y="524" width="91" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="34F-Mv-2Da"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="32"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fzg-UZ-3bg" kind="show" id="yWu-M8-0Y4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.61176470589999998" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -834,10 +832,8 @@
                             <constraint firstItem="Rd7-1q-r1r" firstAttribute="top" secondItem="bxF-Hi-cHc" secondAttribute="bottom" constant="4" id="LT9-Ah-Jzv"/>
                             <constraint firstItem="PoW-V9-h0r" firstAttribute="leading" secondItem="llA-5r-BEh" secondAttribute="leading" id="My6-NT-mxD"/>
                             <constraint firstItem="bxF-Hi-cHc" firstAttribute="trailing" secondItem="i4F-T4-ZzC" secondAttribute="trailing" id="NSn-Ic-sk8"/>
-                            <constraint firstItem="OdM-Jh-MLF" firstAttribute="centerX" secondItem="Rd7-1q-r1r" secondAttribute="centerX" id="OgS-Ic-cFU"/>
                             <constraint firstItem="bxF-Hi-cHc" firstAttribute="top" secondItem="i4F-T4-ZzC" secondAttribute="bottom" constant="8" symbolic="YES" id="OvV-5c-M8J"/>
                             <constraint firstItem="mp0-0T-Guk" firstAttribute="leading" secondItem="llA-5r-BEh" secondAttribute="leading" id="QVD-KJ-7gz"/>
-                            <constraint firstItem="ty0-E8-G7e" firstAttribute="top" secondItem="OdM-Jh-MLF" secondAttribute="bottom" constant="8" symbolic="YES" id="SLd-b3-i4N"/>
                             <constraint firstItem="llA-5r-BEh" firstAttribute="top" secondItem="PoW-V9-h0r" secondAttribute="bottom" constant="8" symbolic="YES" id="TqJ-36-TYZ"/>
                             <constraint firstItem="mp0-0T-Guk" firstAttribute="trailing" secondItem="i4F-T4-ZzC" secondAttribute="trailing" id="TxX-Pn-iKt"/>
                             <constraint firstItem="llA-5r-BEh" firstAttribute="trailing" secondItem="mp0-0T-Guk" secondAttribute="trailing" id="U5w-Pd-bcr"/>
@@ -845,7 +841,6 @@
                             <constraint firstItem="mp0-0T-Guk" firstAttribute="top" secondItem="llA-5r-BEh" secondAttribute="bottom" constant="3" id="bNW-hu-Zmt"/>
                             <constraint firstItem="llA-5r-BEh" firstAttribute="trailing" secondItem="06H-2k-1lz" secondAttribute="trailingMargin" id="dqv-yA-tRf"/>
                             <constraint firstItem="Rd7-1q-r1r" firstAttribute="leading" secondItem="bxF-Hi-cHc" secondAttribute="leading" id="goL-ue-yXp"/>
-                            <constraint firstItem="OdM-Jh-MLF" firstAttribute="top" secondItem="Rd7-1q-r1r" secondAttribute="bottom" constant="8" symbolic="YES" id="lEs-dV-oNN"/>
                             <constraint firstItem="mp0-0T-Guk" firstAttribute="leading" secondItem="06H-2k-1lz" secondAttribute="leadingMargin" id="sjq-g3-U11"/>
                         </constraints>
                     </view>
@@ -981,7 +976,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-7K-7lA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lost_username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-7K-7lA">
                                 <rect key="frame" x="23" y="44" width="568" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="sdc-zs-9Z0"/>
@@ -1061,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKw-ap-Z0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3622" y="-3486"/>
+            <point key="canvasLocation" x="3611" y="-3128"/>
         </scene>
     </scenes>
     <resources>
@@ -1070,5 +1065,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lGc-qx-PA6"/>
+        <segue reference="yWu-M8-0Y4"/>
     </inferredMetricsTieBreakers>
 </document>
