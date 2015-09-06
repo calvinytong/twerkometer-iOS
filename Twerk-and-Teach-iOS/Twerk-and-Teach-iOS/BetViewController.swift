@@ -30,7 +30,7 @@ class BetViewController : UIViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueToReadyScreen"
         {
-            var dvc = segue.destinationViewController as! PlayerFoundViewController
+            var dvc = segue.destinationViewController as! ReadyScreenViewController
             dvc.stream = sender as! PaerStream
             
         }

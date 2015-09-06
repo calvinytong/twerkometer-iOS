@@ -15,7 +15,7 @@ class PaerStream: NSObject, PNObjectEventListener
 {
     var client : PubNub!
     
-    let config = PNConfiguration(publishKey: "pub-c-ae1d1e9e-6147-460b-bea0-2fa7e75c105b", subscribeKey: "sub-c-69ac7426-3fab-11e5-b66d-02ee2ddab7fe")
+    let config = PNConfiguration(publishKey: "pub-c-1b3b7682-6fc8-40f4-b51f-d10e79987840", subscribeKey: "sub-c-0df608f6-5430-11e5-85f6-0619f8945a4f")
     
     var localMinor : Int!
     var localMajor : Int!
@@ -64,15 +64,21 @@ class PaerStream: NSObject, PNObjectEventListener
         if dataToSend["type"] as! String == "start"
         {
             self.pOne.ready = 1
+            if pOne.ready + pTwo.ready == 2{
+                NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
+            }
         }
         else if dataToSend["type"] as! String == "finish"
         {
             pOne.finished = 1
+            if pOne.finished + pTwo.finished == 2{
+                NSNotificationCenter.defaultCenter().postNotificationName("bothPFinished", object: nil)
+            }
         }
         
         if self.pOne.ready + self.pTwo.ready == 2
         {
-        NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName("bothPReady", object: nil)
         }
         
         client.publish(self.dataToSend, toChannel: channelName, compressed: false, withCompletion: {
@@ -111,6 +117,10 @@ class PaerStream: NSObject, PNObjectEventListener
                         return
                     case "start":
                         pTwo.ready = 1
+                        if pOne.ready + pTwo.ready == 2{
+                            NSNotificationCenter.defaultCenter().postNotificationName("bothPReady", object: nil)
+                        }
+                        
                         return
                     case "incrementPTwo":
                         pTwo.score++
@@ -118,6 +128,9 @@ class PaerStream: NSObject, PNObjectEventListener
                     case "finish":
                         pTwo.score = messageData["score"] as! Int
                         pTwo.finished = 1
+                        if pOne.finished + pTwo.finished == 2{
+                            NSNotificationCenter.defaultCenter().postNotificationName("bothPFinished", object: nil)
+                        }
                         return
                     
                     default:

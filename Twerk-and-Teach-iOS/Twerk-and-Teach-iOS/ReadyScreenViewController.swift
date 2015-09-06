@@ -16,20 +16,23 @@ class ReadyScreenViewController : UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "bothPReady:", name: "bothPReady", object: nil)
     }
     
     @IBAction func Start(sender: AnyObject)
     {
-        if stream.pOne.ready + stream.pTwo.ready == 2 {
-            performSegueWithIdentifier("SegueToTwerkViewController", sender: nil)
-        }
+        stream.sendData(["type": "start"])
+    }
+    
+    func bothPReady(notification: NSNotification) {
+        performSegueWithIdentifier("SegueToTwerkViewController", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SegueToTwerkViewController"
         {
             var dvc = segue.destinationViewController as! TwerkViewController
-            dvc.stream = sender as! PaerStream!
+            dvc.stream = stream
             
         }
     }

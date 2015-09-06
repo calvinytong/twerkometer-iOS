@@ -30,6 +30,7 @@ class TwerkViewController: UIViewController {
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
         twerkInstance.twerkMotionManager.accelerometerUpdateInterval = 0.2
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "bothPFinished:", name: "bothPFinished", object: nil)
         
         if (twerkInstance.timeRemaining > 0) {
             twerkInstance.twerkMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) -> Void in
@@ -50,19 +51,22 @@ class TwerkViewController: UIViewController {
     func countDown() {
         twerkInstance.timeRemaining--
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
-        if (twerkInstance.timeRemaining == 0 && stream.pOne.finished + stream.pTwo.finished == 2) {
+        if (twerkInstance.timeRemaining == 0) {
+            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
             twerkInstance.timer.invalidate()
             twerkInstance.stop = true
-            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
-            if stream.pOne.score >= stream.pTwo.score {
-                performSegueWithIdentifier("SegueToWonViewController", sender: nil)
-            }
-            else {
-                performSegueWithIdentifier("SegueToLostViewController", sender: nil)
-            }
         }
     }
     
+    func bothPFinished(notification: NSNotification) {
+        if stream.pOne.score >= stream.pTwo.score {
+            performSegueWithIdentifier("SegueToWonViewController", sender: nil)
+        }
+        else {
+            performSegueWithIdentifier("SegueToLostViewController", sender: nil)
+        }
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

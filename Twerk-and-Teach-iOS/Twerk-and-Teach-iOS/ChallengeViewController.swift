@@ -25,7 +25,7 @@ class ChallengeViewController : UIViewController, PaerUIDelegate
 {
     
     @IBOutlet weak var challengebutton: UIButton!
-    var stream : PaerStream!
+    
     
     
     override func viewDidLoad()
@@ -35,9 +35,8 @@ class ChallengeViewController : UIViewController, PaerUIDelegate
         super.viewDidLoad()
         
         self.challengebutton.layer.cornerRadius = self.challengebutton.bounds.size.width/2.0;
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "channelcreated:", name: "channelcreated", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "twoinchannel:", name: "twoinchannel", object: nil)
+        
     }
     
     
@@ -54,17 +53,13 @@ class ChallengeViewController : UIViewController, PaerUIDelegate
         
     }
     
-    func channelcreated(notification: NSNotification) {
-        stream = notification.object as! PaerStream
-        NSNotificationCenter.defaultCenter().removeObserver(notification)
-    }
     
     
-    func twoinchannel(notification: NSNotification)
+    func channelcreated(notification: NSNotification)
         
     {
         
-        performSegueWithIdentifier("SegueToPlayerFound", sender: nil)
+        performSegueWithIdentifier("SegueToPlayerFound", sender: notification.object)
         
         NSNotificationCenter.defaultCenter().removeObserver(notification)
         
@@ -80,7 +75,7 @@ class ChallengeViewController : UIViewController, PaerUIDelegate
             
             var dvc = segue.destinationViewController as! PlayerFoundViewController
             
-            dvc.stream = stream
+            dvc.stream = sender as! PaerStream
             
             
             
