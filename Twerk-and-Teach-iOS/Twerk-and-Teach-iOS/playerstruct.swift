@@ -9,6 +9,7 @@
 import Foundation
 
 struct player {
+    var username : String = ""
     var ready : Int = 0
     var score : Int = 0
     var finished : Int = 0

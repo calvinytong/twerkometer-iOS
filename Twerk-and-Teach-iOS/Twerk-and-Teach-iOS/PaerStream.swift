@@ -8,6 +8,8 @@
 
 import Foundation
 import PubNub
+import Parse
+import Bolts
 
 class PaerStream: NSObject, PNObjectEventListener
 {
@@ -46,6 +48,8 @@ class PaerStream: NSObject, PNObjectEventListener
         self.uuid = UIDevice.currentDevice().identifierForVendor.UUIDString
         
         formChannelName()
+        
+        pOne.username = PFUser.currentUser()!.username!
         
         client.subscribeToChannels([channelName], withPresence: true)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "pOneIncrement:", name: "pOneIncrement", object: nil)
@@ -101,12 +105,12 @@ class PaerStream: NSObject, PNObjectEventListener
                 var pTwoScore : Int!
                 switch(messageData["type"] as! String)
                 {
+                    case "identify":
+                        pTwo.username = messageData["username"] as! String
+                        NSNotificationCenter.defaultCenter().postNotificationName("setusername", object: nil)
+                        return
                     case "start":
                         pTwo.ready = 1
-                        if pOne.ready + pTwo.ready == 2
-                        {
-                            NSNotificationCenter.defaultCenter().postNotificationName("ready", object: nil)
-                        }
                         return
                     case "incrementPTwo":
                         pTwo.score++
@@ -114,11 +118,6 @@ class PaerStream: NSObject, PNObjectEventListener
                     case "finish":
                         pTwo.score = messageData["score"] as! Int
                         pTwo.finished = 1
-                        if pOne.finished + pTwo.finished == 2
-                        {
-                            
-                            NSNotificationCenter.defaultCenter().postNotificationName("finished", object: [pOne.score, pTwo.score])
-                        }
                         return
                     
                     default:
@@ -153,7 +152,7 @@ class PaerStream: NSObject, PNObjectEventListener
                         {
                             println("result.data.uuids: \(result.data.uuids)")
                             self.twousersinchannel = true
-                            
+                            NSNotificationCenter.defaultCenter().postNotificationName("twoinchannel", object: nil)
 //                            if !self.sentData
 //                            {
 //                                self.sendData() // there are now two unique users in the channel, send data
