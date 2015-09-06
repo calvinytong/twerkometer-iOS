@@ -26,6 +26,7 @@ class ReadyScreenViewController : UIViewController
     
     func bothPReady(notification: NSNotification) {
         performSegueWithIdentifier("SegueToTwerkViewController", sender: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(notification)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
