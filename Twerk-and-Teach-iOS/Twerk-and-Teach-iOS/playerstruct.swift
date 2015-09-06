@@ -13,4 +13,5 @@ struct player {
     var ready : Int = 0
     var score : Int = 0
     var finished : Int = 0
+    var stdv : Double = 0.0
 }

@@ -77,6 +77,7 @@ class PaerStream: NSObject, PNObjectEventListener
         else if dataToSend["type"] as! String == "finish"
         {
             pOne.finished = 1
+            pOne.stdv = dataToSend["stdv"] as! Double
             if pOne.finished + pTwo.finished == 2{
                 NSNotificationCenter.defaultCenter().postNotificationName("bothPFinished", object: nil)
             }
@@ -136,6 +137,7 @@ class PaerStream: NSObject, PNObjectEventListener
                     case "finish":
                         pTwo.score = messageData["score"] as! Int
                         pTwo.finished = 1
+                        pTwo.stdv = messageData["stdv"] as! Double
                         if pOne.finished + pTwo.finished == 2{
                             NSNotificationCenter.defaultCenter().postNotificationName("bothPFinished", object: nil)
                         }

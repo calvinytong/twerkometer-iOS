@@ -21,11 +21,13 @@ class twerkClass {
     var twerkMotionManager = CMMotionManager()
     var datastream : PaerStream!
     
+    var stdv : Double!
+    
     init(stream : PaerStream) {
         datastream = stream
     }
     
-    func standardDeviation(twerkArray: [Double]) {
+    func standardDeviation(twerkArray: [Double]) -> Double {
         var indicesArray: [Int] = []
         for x in 0...(twerkArray.count - 1) {
             if twerkArray[x] > 1.5 {
@@ -43,7 +45,7 @@ class twerkClass {
             stdv += Double(z*z)
         }
         
-        stdv = sqrt(stdv)
+        return sqrt(stdv)
     }
     
     func outputAccelerationData(acceleration: CMAcceleration) {
@@ -64,7 +66,7 @@ class twerkClass {
         }
         if (stop) {
             twerkMotionManager.stopAccelerometerUpdates()
-            
+            stdv = standardDeviation(twerkVectorArray)
         }
     }
 }

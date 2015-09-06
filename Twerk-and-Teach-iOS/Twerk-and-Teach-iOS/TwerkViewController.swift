@@ -78,13 +78,19 @@ class TwerkViewController: UIViewController {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         if (twerkInstance.timeRemaining == 0) {
-            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
+            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount, "stdv": twerkInstance.stdv])
             twerkInstance.timer.invalidate()
             twerkInstance.stop = true
         }
     }
     
     func bothPFinished(notification: NSNotification) {
+        if stream.pOne.stdv < stream.pTwo.stdv {
+            stream.pOne.score += 5
+        }
+        else {
+            stream.pTwo.score += 5
+        }
         if stream.pOne.score >= stream.pTwo.score {
             performSegueWithIdentifier("SegueToWonViewController", sender: nil)
         }

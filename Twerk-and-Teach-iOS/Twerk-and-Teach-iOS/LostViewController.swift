@@ -66,6 +66,11 @@ class LostViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name: AnyObject = defaults.valueForKey("bet")
+        {
+            donation = name as! Double
+        }
         var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("6", ofType: "wav")!)
         println(alertSound)
         
@@ -80,13 +85,10 @@ class LostViewController : UIViewController {
 
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
-        postTransfer(0.25, description: "for charity", accountId: "0")
-        let defaults = NSUserDefaults.standardUserDefaults()
+        postTransfer(donation, description: "for charity", accountId: "0")
         
-        if let name: AnyObject = defaults.valueForKey("bet")
-        {
-            donation = name as! Double
-        }
+        
+
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
