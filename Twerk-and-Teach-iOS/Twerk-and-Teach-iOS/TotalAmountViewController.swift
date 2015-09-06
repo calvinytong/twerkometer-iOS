@@ -31,6 +31,5 @@ class TotalAmountViewController: UIViewController {
         donatedAmount?.text = "\(donation)"
     }
     @IBAction func home(sender: AnyObject) {
-        stream.zeroPlayers()
     }
 }

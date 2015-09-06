@@ -34,9 +34,12 @@ class TwerkViewController: UIViewController {
         srand(5000)
         var temp = rand() % 7
         songindex = Int(temp)
+        while(songindex > songs.count)
+        {
+            songindex = songindex - 2
+        }
         
         twerkInstance = twerkClass(stream: stream)
-        
         timeRemainingLabel?.text = "\(twerkInstance.timeRemaining)"
         twerkInstance.twerkMotionManager.accelerometerUpdateInterval = 0.2
         
@@ -78,19 +81,13 @@ class TwerkViewController: UIViewController {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         if (twerkInstance.timeRemaining == 0) {
-            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount, "stdv": twerkInstance.stdv])
+            stream.sendData(["type": "finish", "score": twerkInstance.shakeCount])
             twerkInstance.timer.invalidate()
             twerkInstance.stop = true
         }
     }
     
     func bothPFinished(notification: NSNotification) {
-        if stream.pOne.stdv < stream.pTwo.stdv {
-            stream.pOne.score += 5
-        }
-        else {
-            stream.pTwo.score += 5
-        }
         if stream.pOne.score >= stream.pTwo.score {
             performSegueWithIdentifier("SegueToWonViewController", sender: nil)
         }

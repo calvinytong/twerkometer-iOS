@@ -33,11 +33,13 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lastfirstname.tag = 0
         username.tag = 1
         password.tag = 2
         ccn.tag = 3
         securitycode.tag = 4
         expdate.tag = 5
+        address.tag = 6
         
         username.delegate = self
         password.delegate = self
@@ -117,6 +119,9 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
     {
         switch(textField.tag)
         {
+        case 0:
+            username.becomeFirstResponder()
+            break
         case 1:
             password.becomeFirstResponder()
             break
@@ -125,8 +130,13 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
             break
         case 3:
             securitycode.becomeFirstResponder()
+            break
         case 4:
             expdate.becomeFirstResponder()
+            break
+        case 5:
+            address.becomeFirstResponder()
+            break
         default:
             closeKeyboard()
             createUser(self)

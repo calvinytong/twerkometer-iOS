@@ -37,6 +37,12 @@
 		3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */; };
 		3E7F7AAE1B9BE78900B7B53F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */; };
 		3E7F7AB61B9C021100B7B53F /* 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F7AB51B9C021100B7B53F /* 5.wav */; };
+		3E955E331B9C6D2500C234FF /* Starships.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E2F1B9C6D2500C234FF /* Starships.wav */; };
+		3E955E341B9C6D2500C234FF /* saxobeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E301B9C6D2500C234FF /* saxobeat.wav */; };
+		3E955E351B9C6D2500C234FF /* sandstorm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E311B9C6D2500C234FF /* sandstorm.wav */; };
+		3E955E361B9C6D2500C234FF /* water.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E321B9C6D2500C234FF /* water.wav */; };
+		3E955E391B9C6D3500C234FF /* mambo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E371B9C6D3500C234FF /* mambo.wav */; };
+		3E955E3A1B9C6D3500C234FF /* pbj.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3E955E381B9C6D3500C234FF /* pbj.wav */; };
 		3EA1C17C1B9ADE7200D6AC86 /* twerkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */; };
 		3EA1C17D1B9ADE7200D6AC86 /* TwerkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */; };
 		3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */; };
@@ -112,6 +118,12 @@
 		3E7F7AAB1B9BCBEA00B7B53F /* WonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WonViewController.swift; sourceTree = "<group>"; };
 		3E7F7AAD1B9BE78900B7B53F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3E7F7AB51B9C021100B7B53F /* 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5.wav; sourceTree = "<group>"; };
+		3E955E2F1B9C6D2500C234FF /* Starships.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Starships.wav; path = ../../../../../Desktop/Starships.wav; sourceTree = "<group>"; };
+		3E955E301B9C6D2500C234FF /* saxobeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = saxobeat.wav; path = ../../../../../Desktop/saxobeat.wav; sourceTree = "<group>"; };
+		3E955E311B9C6D2500C234FF /* sandstorm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sandstorm.wav; path = ../../../../../Desktop/sandstorm.wav; sourceTree = "<group>"; };
+		3E955E321B9C6D2500C234FF /* water.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = water.wav; path = ../../../../../Desktop/water.wav; sourceTree = "<group>"; };
+		3E955E371B9C6D3500C234FF /* mambo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = mambo.wav; path = ../../../../../Desktop/mambo.wav; sourceTree = "<group>"; };
+		3E955E381B9C6D3500C234FF /* pbj.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pbj.wav; path = ../../../../../Desktop/pbj.wav; sourceTree = "<group>"; };
 		3EA1C1741B9ADE7200D6AC86 /* twerkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twerkClass.swift; sourceTree = "<group>"; };
 		3EA1C1751B9ADE7200D6AC86 /* TwerkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwerkViewController.swift; sourceTree = "<group>"; };
 		3EA1C1781B9ADE7200D6AC86 /* PaerStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaerStream.swift; sourceTree = "<group>"; };
@@ -253,6 +265,12 @@
 				416BFC971B9C04AC002EC498 /* Transfer.swift */,
 				416BFC991B9C0531002EC498 /* Transaction.swift */,
 				416BFC9B1B9C0F8B002EC498 /* Account.swift */,
+				3E955E371B9C6D3500C234FF /* mambo.wav */,
+				3E955E381B9C6D3500C234FF /* pbj.wav */,
+				3E955E2F1B9C6D2500C234FF /* Starships.wav */,
+				3E955E301B9C6D2500C234FF /* saxobeat.wav */,
+				3E955E311B9C6D2500C234FF /* sandstorm.wav */,
+				3E955E321B9C6D2500C234FF /* water.wav */,
 				3E0221E81B9ADCC4008CD051 /* Supporting Files */,
 				3EA1C1841B9ADE9700D6AC86 /* Twerk-and-Teach-iOS-Bridging-Header.h */,
 			);
@@ -394,13 +412,19 @@
 				3E7F7AB61B9C021100B7B53F /* 5.wav in Resources */,
 				414F6F151B9B7666008A9E7F /* for tech.png in Resources */,
 				3E0221F01B9ADCC4008CD051 /* Main.storyboard in Resources */,
+				3E955E391B9C6D3500C234FF /* mambo.wav in Resources */,
+				3E955E351B9C6D2500C234FF /* sandstorm.wav in Resources */,
+				3E955E361B9C6D2500C234FF /* water.wav in Resources */,
 				3E0221F51B9ADCC4008CD051 /* LaunchScreen.xib in Resources */,
 				414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */,
 				3EFF623A1B9C035F00FBB566 /* 6.wav in Resources */,
 				414F6F191B9B7951008A9E7F /* White Circle.png in Resources */,
+				3E955E331B9C6D2500C234FF /* Starships.wav in Resources */,
 				416900811B9B8C3B00282E0B /* twerk for tech.png in Resources */,
 				3E0221F21B9ADCC4008CD051 /* Images.xcassets in Resources */,
 				414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */,
+				3E955E341B9C6D2500C234FF /* saxobeat.wav in Resources */,
+				3E955E3A1B9C6D3500C234FF /* pbj.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

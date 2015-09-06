@@ -45,7 +45,8 @@ class WonViewController: UIViewController {
     }
     
     @IBAction func home(sender: AnyObject) {
-        stream.zeroPlayers()
+//        stream.zeroPlayers()
+//        stream = nil
     }
     
 }
