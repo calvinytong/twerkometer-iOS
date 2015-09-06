@@ -34,6 +34,16 @@ class PaerStream: NSObject, PNObjectEventListener
     
     var delegate : PaerStreamDelegate!
     
+    func zeroPlayers() {
+        pOne.finished = 0
+        pOne.ready = 0
+        pOne.score = 0
+        
+        pTwo.finished = 0
+        pTwo.ready = 0
+        pTwo.score = 0
+    }
+    
     /**Connect to PubNub and prepare the class channel setup.*/
     init(localMajor: Int, localMinor: Int, foreignMajor: Int, foreignMinor: Int) {
         super.init()

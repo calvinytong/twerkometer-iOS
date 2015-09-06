@@ -12,12 +12,16 @@ import UIKit
 class LostViewController : UIViewController {
     var pOneScore: Int!
     var pTwoScore: Int!
+    var stream : PaerStream!
     @IBOutlet var yourScore: UITextField!
     @IBOutlet var theirScore: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
+    }
+    @IBAction func home(sender: AnyObject) {
+        stream.zeroPlayers()
     }
 
 }

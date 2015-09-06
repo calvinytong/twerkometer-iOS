@@ -73,11 +73,14 @@ class TwerkViewController: UIViewController {
             var dvc = segue.destinationViewController as! LostViewController
             dvc.pOneScore = stream.pOne.score
             dvc.pTwoScore = stream.pTwo.score
+            dvc.stream = stream
         }
         if segue.identifier == "SegueToWonViewController" {
             var dvc = segue.destinationViewController as! WonViewController
             dvc.pOneScore = stream.pOne.score
             dvc.pTwoScore = stream.pTwo.score
+            dvc.stream = stream
+
         }
     }
     
