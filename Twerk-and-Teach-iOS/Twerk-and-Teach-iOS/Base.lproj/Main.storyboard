@@ -9,7 +9,7 @@
         <!--Start-->
         <scene sceneID="jn4-jv-Ewr">
             <objects>
-                <viewController id="vl1-VN-1GB" userLabel="Start" sceneMemberID="viewController">
+                <viewController id="vl1-VN-1GB" userLabel="Start" customClass="MainScreenViewController" customModule="Twerk_and_Teach_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k3F-6w-RC9"/>
                         <viewControllerLayoutGuide type="bottom" id="oav-HV-9eM"/>
