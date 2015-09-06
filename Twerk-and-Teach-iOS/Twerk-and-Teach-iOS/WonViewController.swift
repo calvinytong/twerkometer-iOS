@@ -16,6 +16,12 @@ class WonViewController: UIViewController {
     var stream : PaerStream!
     var audioPlayer : AVAudioPlayer!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     @IBOutlet var yourScore: UITextField!
     @IBOutlet var theirScore: UITextField!
 
@@ -37,7 +43,5 @@ class WonViewController: UIViewController {
         yourScore?.text = "\(pOneScore)"
         theirScore?.text = "\(pTwoScore)"
     }
-    @IBAction func home(sender: AnyObject) {
-        stream.zeroPlayers()
-    }
+
 }

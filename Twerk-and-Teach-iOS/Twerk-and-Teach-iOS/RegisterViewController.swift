@@ -13,6 +13,11 @@ class RegisterViewController : UIViewController, UITextFieldDelegate
 {
     let client = NSEClient.sharedInstance
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
     
     @IBOutlet weak var lastfirstname: UITextField!
     @IBOutlet weak var username: UITextField!

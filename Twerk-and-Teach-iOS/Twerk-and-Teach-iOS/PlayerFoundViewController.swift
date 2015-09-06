@@ -13,6 +13,12 @@ class PlayerFoundViewController : UIViewController
 {
     var stream : PaerStream!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     @IBOutlet weak var ptwolabel: UILabel!
     @IBOutlet weak var playbutton: UIButton!
     

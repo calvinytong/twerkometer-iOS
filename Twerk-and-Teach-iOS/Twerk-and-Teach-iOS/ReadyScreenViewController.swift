@@ -14,6 +14,12 @@ class ReadyScreenViewController : UIViewController
     var stream : PaerStream!
     @IBOutlet weak var Start: UIButton!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "bothPReady:", name: "bothPReady", object: nil)

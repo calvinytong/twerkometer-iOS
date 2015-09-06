@@ -7,6 +7,7 @@
 //
 
 import CoreMotion
+import Darwin
 
 class twerkClass {
     
@@ -22,6 +23,27 @@ class twerkClass {
     
     init(stream : PaerStream) {
         datastream = stream
+    }
+    
+    func standardDeviation(twerkArray: [Double]) {
+        var indicesArray: [Int] = []
+        for x in 0...(twerkArray.count - 1) {
+            if twerkArray[x] > 1.5 {
+                indicesArray.append(x)
+            }
+        }
+        var differenceArray: [Int] = []
+        for y in 1...(indicesArray.count - 1) {
+            differenceArray.append(indicesArray[y] - indicesArray[y-1])
+        }
+        
+        var stdv = 0.0
+        
+        for z in differenceArray {
+            stdv += Double(z*z)
+        }
+        
+        stdv = sqrt(stdv)
     }
     
     func outputAccelerationData(acceleration: CMAcceleration) {

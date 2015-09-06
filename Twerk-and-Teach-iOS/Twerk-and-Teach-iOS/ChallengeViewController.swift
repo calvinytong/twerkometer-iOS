@@ -23,6 +23,11 @@ import UIKit
 class ChallengeViewController : UIViewController, PaerUIDelegate
     
 {
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
     
     @IBOutlet weak var challengebutton: UIButton!
     

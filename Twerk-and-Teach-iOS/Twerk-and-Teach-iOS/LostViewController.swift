@@ -16,6 +16,12 @@ class LostViewController : UIViewController {
     let client = NSEClient.sharedInstance
     var stream : PaerStream!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     func postTransfer(amount: Double, description: String, accountId: String) {
         client.setKey("a4063d9a0849a4e4dbe689e8854443a1")
         TransferRequest(block: {(builder:TransferRequestBuilder) in
@@ -75,9 +81,11 @@ class LostViewController : UIViewController {
         theirScore?.text = "\(pTwoScore)"
         postTransfer(0.25, description: "for charity", accountId: "0")
     }
-    @IBAction func home(sender: AnyObject) {
-        stream.zeroPlayers()
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SegueLostToTotal" {
+            var dvc = segue.destinationViewController as! TotalAmountViewController
+        }
     }
-    
 
 }

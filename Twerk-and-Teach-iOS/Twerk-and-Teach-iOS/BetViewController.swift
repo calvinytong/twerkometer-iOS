@@ -13,6 +13,12 @@ class BetViewController : UIViewController
 {
     var stream : PaerStream!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     @IBOutlet weak var betselector: UISegmentedControl!
     var segmentedControlArray: [Double] = [0.25, 0.5, 0.75, 1.00]
     @IBOutlet weak var confirmbutton: UIButton!

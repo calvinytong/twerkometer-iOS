@@ -47,6 +47,7 @@
 		3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1C1891B9B111500D6AC86 /* ParseManager.swift */; };
 		3EFF623A1B9C035F00FBB566 /* 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3EFF62391B9C035F00FBB566 /* 6.wav */; };
 		3EFF623C1B9C21FD00FBB566 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF623B1B9C21FD00FBB566 /* DonationViewController.swift */; };
+		4120B3BF1B9C2D7000600900 /* TotalAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */; };
 		414F6F0F1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */; };
 		414F6F151B9B7666008A9E7F /* for tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F141B9B7666008A9E7F /* for tech.png */; };
 		414F6F171B9B7713008A9E7F /* for tech italicized.png in Resources */ = {isa = PBXBuildFile; fileRef = 414F6F161B9B7713008A9E7F /* for tech italicized.png */; };
@@ -121,6 +122,7 @@
 		3EA1C1891B9B111500D6AC86 /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		3EFF62391B9C035F00FBB566 /* 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6.wav; sourceTree = "<group>"; };
 		3EFF623B1B9C21FD00FBB566 /* DonationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
+		4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalAmountViewController.swift; sourceTree = "<group>"; };
 		414F6F0E1B9B6B2F008A9E7F /* Nessie-iOS-Wrapper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Nessie-iOS-Wrapper"; path = "../../Nessie-iOS-Wrapper"; sourceTree = "<group>"; };
 		414F6F101B9B6BF0008A9E7F /* LobsterTwo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-Bold.ttf"; sourceTree = "<group>"; };
 		414F6F111B9B6BF0008A9E7F /* LobsterTwo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LobsterTwo-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				3E0221EA1B9ADCC4008CD051 /* AppDelegate.swift */,
 				3E7CC1891B9B8DF1002AF667 /* RegisterViewController.swift */,
+				4120B3BE1B9C2D7000600900 /* TotalAmountViewController.swift */,
 				3E7CC18B1B9B91EC002AF667 /* LoginViewController.swift */,
 				3E7CC18D1B9B9641002AF667 /* ChallengeViewController.swift */,
 				3E7CC18F1B9B9900002AF667 /* PlayerFoundViewController.swift */,
@@ -473,6 +476,7 @@
 				3E0221ED1B9ADCC4008CD051 /* ViewController.swift in Sources */,
 				416BFC941B9C02AA002EC498 /* NSEClient.swift in Sources */,
 				3E7F7AAC1B9BCBEB00B7B53F /* WonViewController.swift in Sources */,
+				4120B3BF1B9C2D7000600900 /* TotalAmountViewController.swift in Sources */,
 				3EA1C1801B9ADE7200D6AC86 /* PaerStream.swift in Sources */,
 				3EA1C18A1B9B111500D6AC86 /* ParseManager.swift in Sources */,
 				3E0221EB1B9ADCC4008CD051 /* AppDelegate.swift in Sources */,

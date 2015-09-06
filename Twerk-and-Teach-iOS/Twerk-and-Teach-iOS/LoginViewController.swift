@@ -15,6 +15,12 @@ class LoginViewController : UIViewController, UITextFieldDelegate
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var login: UIButton!
     
+    override func shouldAutorotate() -> Bool {
+        
+        return false
+        
+    }
+    
     var helper = LoginHelper()
     
     var activetextfield : UITextField!

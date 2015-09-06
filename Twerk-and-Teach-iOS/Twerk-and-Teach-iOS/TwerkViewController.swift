@@ -24,6 +24,7 @@ class TwerkViewController: UIViewController {
     override func shouldAutorotate() -> Bool {
         return false
     }
+
     
     override func viewDidLoad() {
         twerkInstance = twerkClass(stream: stream)
