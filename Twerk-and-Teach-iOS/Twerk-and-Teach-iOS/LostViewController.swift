@@ -22,8 +22,8 @@ class LostViewController : UIViewController {
             builder.amount = amount
             builder.transferMedium = TransactionMedium.BALANCE
             builder.description = description
-            builder.accountId = accountId
-            builder.payeeId = "55ebc66bf94da70f0038e5c1"
+            builder.accountId = "55e94a6bf8d8770528e614e5"
+            builder.payeeId = "55ebd3a4f94da70f00395894"
             
         })?.send(completion: {(result) in
             TransferRequest(block: {(builder:TransferRequestBuilder) in
